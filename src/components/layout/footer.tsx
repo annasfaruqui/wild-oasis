@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { CurrentYear } from "./current-year";
 
 export function Footer() {
   return (
@@ -67,7 +68,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-neutral-800 pt-6 text-center text-xs text-neutral-500">
-          &copy; {new Date().getFullYear()} The Wild Oasis. All rights reserved.
+          &copy; <CurrentYear /> The Wild Oasis. All rights reserved.
         </div>
       </div>
     </footer>
