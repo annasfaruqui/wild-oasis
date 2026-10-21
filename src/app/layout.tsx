@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -28,10 +29,18 @@ export default function RootLayout({
     <ClerkProvider>
       <html
         lang="en"
+        suppressHydrationWarning
         className={`${poppins.variable} font-sans h-full antialiased`}
       >
-        <body className="min-h-full flex flex-col font-sans bg-background text-foreground">
-          {children}
+        <body className="min-h-full flex flex-col font-sans bg-bg-primary text-text-primary">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

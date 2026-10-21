@@ -1,13 +1,4 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
-export function CurrentYear() {
-  const [year, setYear] = useState<number>(2026);
-
-  useEffect(() => {
-    setYear(new Date().getFullYear());
-  }, []);
-
-  return <span>{year}</span>;
+export async function CurrentYear() {
+  "use cache";
+  return <span>{new Date().getFullYear()}</span>;
 }

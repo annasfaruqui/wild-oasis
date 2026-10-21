@@ -1,25 +1,131 @@
 @import "tailwindcss";
 
+/* Enable class-based dark mode (e.g. <html class="dark">) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ==========================================================================
+   CENTRAL DESIGN SYSTEM: THE WILD OASIS LUXURY THEME
+   Single source of truth for all application colors.
+   Modify here to adjust themes globally across the entire codebase.
+   ========================================================================== */
+
 :root {
-  --background: #fdfbf7;
-  --foreground: #1c1917;
+  /* --- LIGHT MODE PALETTE (Warm Alpine Luxury & Cozy Linen) --- */
+  --bg-primary: #FAF5F0;        /* accent-50: warm cozy linen/canvas */
+  --bg-secondary: #FFFFFF;      /* pure crisp elevated card surface */
+  --bg-tertiary: #F4ECE1;       /* accent-100: inputs, muted rows, tags */
+  --bg-hover: #E8D6BF;          /* accent-200: subtle warm hover state */
+  
+  --border-subtle: #E8D6BF;     /* accent-200: soft natural hairline divider */
+  --border-focus: #C69963;      /* accent-500: signature luxury gold */
+
+  --text-primary: #141C24;      /* primary-950: deep pine slate text */
+  --text-secondary: #3C546C;    /* primary-700: muted alpine slate */
+  --text-muted: #5E82A6;        /* primary-500: faded pine haze */
+
+  --accent: #C69963;            /* accent-500: signature timber gold */
+  --accent-hover: #B78343;      /* accent-600: rich bronze hover */
+  --accent-subtle: #F4ECE1;     /* accent-100: pill badge fill */
+  --accent-text: #926835;       /* accent-700: high-contrast text on light */
+  --accent-foreground: #FFFFFF; /* button text */
+
+  /* Semantic Feedback */
+  --color-success: #2E7D58;
+  --color-error: #9E3A3A;
+  --color-warning: #C67D28;
+  --color-info: #4C6B8A;
+}
+
+.dark {
+  /* --- DARK MODE PALETTE (Midnight Alpine Pine & Warm Glow) --- */
+  --bg-primary: #141C24;        /* primary-950: deep midnight alpine pine */
+  --bg-secondary: #1B2631;      /* primary-900: obsidian card slate */
+  --bg-tertiary: #2C3D4F;       /* primary-800: inputs, table headers */
+  --bg-hover: #3C546C;          /* primary-700: interactive hover */
+
+  --border-subtle: #2C3D4F;     /* primary-800: soft dark divider */
+  --border-focus: #C69963;      /* accent-500: signature luxury gold */
+
+  --text-primary: #FAF5F0;      /* accent-50: warm off-white linen */
+  --text-secondary: #B7C7D7;    /* primary-200: soft alpine mist */
+  --text-muted: #7C99B6;        /* primary-400: pine haze */
+
+  --accent: #C69963;            /* accent-500: signature timber gold */
+  --accent-hover: #B78343;      /* accent-600: rich bronze hover */
+  --accent-subtle: #382814;     /* accent-950: subtle dark gold glow */
+  --accent-text: #DDC2A2;       /* accent-300: warm champagne text on dark */
+  --accent-foreground: #141C24; /* button text */
+
+  /* Semantic Feedback (Enhanced for dark contrast) */
+  --color-success: #4EAB7C;
+  --color-error: #DE5B5B;
+  --color-warning: #E59840;
+  --color-info: #7C99B6;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Typography */
   --font-sans: var(--font-poppins), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #141c24;
-    --foreground: #e7e5e4;
-  }
+  /* ========================================================================
+     SEMANTIC UTILITIES (Adapts automatically to Light / Dark mode)
+     Use these across all pages and components!
+     ======================================================================== */
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-tertiary: var(--bg-tertiary);
+  --color-bg-hover: var(--bg-hover);
+
+  --color-border-subtle: var(--border-subtle);
+  --color-border-focus: var(--border-focus);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  --color-brand-accent: var(--accent);
+  --color-brand-accent-hover: var(--accent-hover);
+  --color-brand-accent-subtle: var(--accent-subtle);
+  --color-brand-accent-text: var(--accent-text);
+  --color-brand-accent-foreground: var(--accent-foreground);
+
+  --color-status-success: var(--color-success);
+  --color-status-error: var(--color-error);
+  --color-status-warning: var(--color-warning);
+  --color-status-info: var(--color-info);
+
+  /* ========================================================================
+     RAW PALETTES (From references/theme-guest-old.js)
+     Available when specific fixed shades are required.
+     ======================================================================== */
+  --color-primary-50: #E1E8EF;
+  --color-primary-100: #D4DEE7;
+  --color-primary-200: #B7C7D7;
+  --color-primary-300: #99B0C7;
+  --color-primary-400: #7C99B6;
+  --color-primary-500: #5E82A6;
+  --color-primary-600: #4C6B8A;
+  --color-primary-700: #3C546C;
+  --color-primary-800: #2C3D4F;
+  --color-primary-900: #1B2631;
+  --color-primary-950: #141C24;
+
+  --color-accent-50: #FAF5F0;
+  --color-accent-100: #F4ECE1;
+  --color-accent-200: #E8D6BF;
+  --color-accent-300: #DDC2A2;
+  --color-accent-400: #D2AF84;
+  --color-accent-500: #C69963;
+  --color-accent-600: #B78343;
+  --color-accent-700: #926835;
+  --color-accent-800: #6C4D28;
+  --color-accent-900: #4B351B;
+  --color-accent-950: #382814;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   font-family: var(--font-poppins), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }

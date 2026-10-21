@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export function Navbar() {
   return (
@@ -19,31 +20,33 @@ export function Navbar() {
           </span>
         </Link>
 
-        <div className="flex items-center gap-6 md:gap-8 text-sm md:text-base font-medium text-white/90">
+        <div className="flex items-center gap-4 md:gap-6 text-sm md:text-base font-medium text-white/90">
           <Link
             href="/cabins"
-            className="transition-colors hover:text-amber-300 drop-shadow-sm"
+            className="transition-colors hover:text-accent-400 drop-shadow-sm"
           >
             Cabins
           </Link>
           <Link
-            href="#about"
-            className="transition-colors hover:text-amber-300 drop-shadow-sm"
+            href="/about"
+            className="transition-colors hover:text-accent-400 drop-shadow-sm"
           >
             About
           </Link>
           <Link
-            href="/account"
-            className="transition-colors hover:text-amber-300 drop-shadow-sm"
+            href="/dashboard"
+            className="transition-colors hover:text-accent-400 drop-shadow-sm"
           >
             Guest Area
           </Link>
           <Link
-            href="/dashboard"
-            className="rounded-full bg-amber-500/90 px-4 py-1.5 text-xs md:text-sm font-semibold text-neutral-900 shadow-md transition-all hover:bg-amber-400"
+            href="/admin/dashboard"
+            className="rounded-full bg-brand-accent px-4 py-1.5 text-xs md:text-sm font-semibold text-primary-950 shadow-md transition-all hover:bg-brand-accent-hover"
           >
             Staff Portal
           </Link>
+
+          <ThemeToggle className="ml-1" />
         </div>
       </nav>
     </header>
