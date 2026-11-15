@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import logoImage from "@public/brand/logo.webp";
 
 export default function AuthLayout({
   children,
@@ -15,7 +16,7 @@ export default function AuthLayout({
 
       <Link href="/" className="mb-8 flex items-center gap-3">
         <Image
-          src="/brand/logo.webp"
+          src={logoImage}
           alt="The Wild Oasis Logo"
           width={44}
           height={44}

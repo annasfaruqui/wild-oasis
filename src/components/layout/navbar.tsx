@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import logoImage from "@public/brand/logo.webp";
 
 export function Navbar() {
   return (
@@ -8,7 +9,7 @@ export function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/brand/logo.webp"
+            src={logoImage}
             alt="The Wild Oasis Logo"
             width={48}
             height={48}

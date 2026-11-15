@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { CurrentYear } from "./current-year";
+import logoImage from "@public/brand/logo.webp";
 
 export function Footer() {
   return (
@@ -10,7 +11,7 @@ export function Footer() {
           <div className="space-y-4 md:col-span-2">
             <div className="flex items-center gap-3">
               <Image
-                src="/brand/logo.webp"
+                src={logoImage}
                 alt="The Wild Oasis Logo"
                 width={40}
                 height={40}
@@ -21,8 +22,8 @@ export function Footer() {
               </span>
             </div>
             <p className="max-w-md text-sm text-text-muted">
-              Where luxury living meets untouched wilderness in the heart of
-              the Dolomites. An intimate mountain retreat managed with devotion
+              Where luxury living meets untouched wilderness in the heart of the
+              Dolomites. An intimate mountain retreat managed with devotion
               since 1962.
             </p>
           </div>
@@ -33,22 +34,34 @@ export function Footer() {
             </h4>
             <ul className="mt-4 space-y-2 text-sm text-text-secondary">
               <li>
-                <Link href="/cabins" className="hover:text-brand-accent transition-colors">
+                <Link
+                  href="/cabins"
+                  className="hover:text-brand-accent transition-colors"
+                >
                   Cabins
                 </Link>
               </li>
               <li>
-                <Link href="#about" className="hover:text-brand-accent transition-colors">
+                <Link
+                  href="#about"
+                  className="hover:text-brand-accent transition-colors"
+                >
                   Our Story
                 </Link>
               </li>
               <li>
-                <Link href="/dashboard" className="hover:text-brand-accent transition-colors">
+                <Link
+                  href="/dashboard"
+                  className="hover:text-brand-accent transition-colors"
+                >
                   Guest Area
                 </Link>
               </li>
               <li>
-                <Link href="/admin/dashboard" className="hover:text-brand-accent transition-colors">
+                <Link
+                  href="/admin/dashboard"
+                  className="hover:text-brand-accent transition-colors"
+                >
                   Staff Portal
                 </Link>
               </li>
@@ -60,8 +73,10 @@ export function Footer() {
               Location & Contact
             </h4>
             <p className="mt-4 text-sm text-text-secondary leading-relaxed">
-              Dolomites, Trentino-Alto Adige<br />
-              Italy<br />
+              Dolomites, Trentino-Alto Adige
+              <br />
+              Italy
+              <br />
               hello@thewildoasis.com
             </p>
           </div>

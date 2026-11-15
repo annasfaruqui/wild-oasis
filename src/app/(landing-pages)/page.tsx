@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import bgImage from "@public/brand/bg.webp";
+import about1Image from "@public/about/about-1.webp";
+import about2Image from "@public/about/about-2.webp";
 
 export default function HomePage() {
   return (
@@ -11,14 +14,16 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative flex min-h-screen items-center justify-center px-6 text-center">
         <Image
-          src="/brand/bg.webp"
+          src={bgImage}
           alt="Dolomites mountain range with forest cabins"
           fill
           priority
+          sizes="100vw"
+          placeholder="blur"
           quality={85}
           className="object-cover object-center brightness-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-950/60 via-transparent to-primary-950/90" />
+        <div className="absolute inset-0 bg-linear-to-b from-primary-950/60 via-transparent to-primary-950/90" />
 
         <div className="relative z-10 max-w-4xl space-y-6 pt-20">
           <span className="inline-block rounded-full border border-brand-accent/30 bg-primary-950/70 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-accent-300 backdrop-blur-md">
@@ -50,9 +55,11 @@ export default function HomePage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="relative z-10 bg-bg-secondary py-24 sm:py-32 transition-colors duration-200">
+      <section
+        id="about"
+        className="relative z-10 bg-bg-secondary py-24 sm:py-32 transition-colors duration-200"
+      >
         <div className="mx-auto max-w-7xl px-6 lg:px-12 space-y-28">
-          
           {/* Story 1 */}
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="space-y-6 lg:col-span-7">
@@ -64,24 +71,27 @@ export default function HomePage() {
               </h2>
               <div className="space-y-4 text-base text-text-secondary leading-relaxed font-light">
                 <p>
-                  Where nature&apos;s splendor and luxurious living meet in harmony.
-                  Tucked away in the secluded heart of the Italian Dolomites, this
-                  is your serene retreat away from the world.
+                  Where nature&apos;s splendor and luxurious living meet in
+                  harmony. Tucked away in the secluded heart of the Italian
+                  Dolomites, this is your serene retreat away from the world.
                 </p>
                 <p>
                   Our bespoke wooden cabins provide a cozy base, but the real
-                  freedom is found in the surrounding alpine woods. Wander through
-                  towering pine groves, breathe in crisp alpine air, and gaze at
-                  unending starscapes from your private hot tub or fire pit.
+                  freedom is found in the surrounding alpine woods. Wander
+                  through towering pine groves, breathe in crisp alpine air, and
+                  gaze at unending starscapes from your private hot tub or fire
+                  pit.
                 </p>
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl lg:col-span-5 aspect-[4/3] border border-border-subtle">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl lg:col-span-5 aspect-4/3 border border-border-subtle">
               <Image
-                src="/about/about-1.webp"
+                src={about1Image}
                 alt="Family sitting around campfire outside wooden cabin"
                 fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                placeholder="blur"
                 className="object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
@@ -89,11 +99,13 @@ export default function HomePage() {
 
           {/* Story 2 */}
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
-            <div className="relative order-2 lg:order-1 overflow-hidden rounded-2xl shadow-2xl lg:col-span-5 aspect-[4/3] border border-border-subtle">
+            <div className="relative order-2 lg:order-1 overflow-hidden rounded-2xl shadow-2xl lg:col-span-5 aspect-4/3 border border-border-subtle">
               <Image
-                src="/about/about-2.webp"
+                src={about2Image}
                 alt="The family team running The Wild Oasis"
                 fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                placeholder="blur"
                 className="object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
@@ -107,9 +119,10 @@ export default function HomePage() {
               </h2>
               <div className="space-y-4 text-base text-text-secondary leading-relaxed font-light">
                 <p>
-                  For over six decades, The Wild Oasis has remained a family-guided
-                  haven. Founded by our grandparents, every corner has been shaped
-                  with care and commitment to authentic hospitality.
+                  For over six decades, The Wild Oasis has remained a
+                  family-guided haven. Founded by our grandparents, every corner
+                  has been shaped with care and commitment to authentic
+                  hospitality.
                 </p>
                 <p>
                   Here, you are not simply a reservation number; you are part of
@@ -128,7 +141,6 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
