@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 import logoImage from "@public/brand/logo.webp";
 
 export default function UserLayout({
@@ -54,16 +53,12 @@ export default function UserLayout({
             >
               Profile
             </Link>
-
-            <div className="flex items-center gap-2 pl-2">
-              <ThemeToggle />
-              <Link
-                href="/admin/dashboard"
-                className="bg-bg-elevated px-3 py-1 text-xs font-semibold text-text-primary transition-colors hover:bg-bg-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
-              >
-                Staff
-              </Link>
-            </div>
+            <Link
+              href="/admin/dashboard"
+              className="bg-bg-elevated px-3 py-1 text-xs font-semibold text-text-primary transition-colors hover:bg-bg-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
+            >
+              Staff
+            </Link>
           </div>
         </nav>
       </header>

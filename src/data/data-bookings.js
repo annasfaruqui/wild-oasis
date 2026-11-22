@@ -2,9 +2,8 @@ import dayjs from "dayjs";
 
 function fromToday(numDays, withTime = false) {
   const d = dayjs().add(numDays, "day");
-  if (!withTime) {
-    return d.startOf("day").toISOString().slice(0, -1);
-  }
+  if (!withTime) return d.startOf("day").toISOString().slice(0, -1);
+
   return d.toISOString().slice(0, -1);
 }
 

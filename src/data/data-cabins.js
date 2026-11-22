@@ -1,80 +1,122 @@
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
-
-const imageUrl = supabaseUrl
-  ? `${supabaseUrl}/storage/v1/object/public/cabin-images/`
-  : "/cabins/";
-
 export const cabins = [
   {
-    name: "001",
+    id: 1,
+    name: "Timber Ridge",
     maxCapacity: 2,
     regularPrice: 250,
     discount: 0,
-    image: imageUrl + "cabin-001.webp",
+    image: "/cabins/cabin-001.webp",
     description:
-      "Discover the ultimate luxury getaway for couples in the cozy wooden cabin 001. Nestled in a picturesque forest, this stunning cabin offers a secluded and intimate retreat. Inside, enjoy modern high-quality wood interiors, a comfortable seating area, a fireplace and a fully-equipped kitchen. The plush king-size bed, dressed in fine linens guarantees a peaceful nights sleep. Relax in the spa-like shower and unwind on the private deck with hot tub.",
+      "Discover the ultimate luxury getaway for couples in the cozy wooden cabin 001. Nestled in a picturesque forest, this stunning cabin offers a secluded and intimate retreat. Inside, enjoy modern high-quality wood interiors, a comfortable seating area, a fireplace and a fully-equipped kitchen. The plush king-size bed dressed in fine linens guarantees a peaceful night's sleep. Relax in the spa-like shower and unwind on the private deck with hot tub.",
   },
   {
-    name: "002",
+    id: 2,
+    name: "Pine Hollow",
     maxCapacity: 2,
     regularPrice: 350,
     discount: 25,
-    image: imageUrl + "cabin-002.webp",
+    image: "/cabins/cabin-002.webp",
     description:
       "Escape to the serenity of nature and indulge in luxury in our cozy cabin 002. Perfect for couples, this cabin offers a secluded and intimate retreat in the heart of a picturesque forest. Inside, you will find warm and inviting interiors crafted from high-quality wood, a comfortable living area, a fireplace and a fully-equipped kitchen. The luxurious bedroom features a plush king-size bed and spa-like shower. Relax on the private deck with hot tub and take in the beauty of nature.",
   },
   {
-    name: "003",
+    id: 3,
+    name: "Alpine Loft",
     maxCapacity: 4,
     regularPrice: 300,
     discount: 0,
-    image: imageUrl + "cabin-003.webp",
+    image: "/cabins/cabin-003.webp",
     description:
       "Experience luxury family living in our medium-sized wooden cabin 003. Perfect for families of up to 4 people, this cabin offers a comfortable and inviting space with all modern amenities. Inside, you will find warm and inviting interiors crafted from high-quality wood, a comfortable living area, a fireplace, and a fully-equipped kitchen. The bedrooms feature plush beds and spa-like bathrooms. The cabin has a private deck with a hot tub and outdoor seating area, perfect for taking in the natural surroundings.",
   },
   {
-    name: "004",
+    id: 4,
+    name: "Eagle Crest",
     maxCapacity: 4,
     regularPrice: 500,
     discount: 50,
-    image: imageUrl + "cabin-004.webp",
+    image: "/cabins/cabin-004.webp",
     description:
       "Indulge in the ultimate luxury family vacation in this medium-sized cabin 004. Designed for families of up to 4, this cabin offers a sumptuous retreat for the discerning traveler. Inside, the cabin boasts of opulent interiors crafted from the finest quality wood, a comfortable living area, a fireplace, and a fully-equipped gourmet kitchen. The bedrooms are adorned with plush beds and spa-inspired en-suite bathrooms. Step outside to your private deck and soak in the natural surroundings while relaxing in your own hot tub.",
   },
   {
-    name: "005",
+    id: 5,
+    name: "Cedar Grove",
     maxCapacity: 6,
     regularPrice: 350,
     discount: 0,
-    image: imageUrl + "cabin-005.webp",
+    image: "/cabins/cabin-005.webp",
     description:
       "Enjoy a comfortable and cozy getaway with your group or family in our spacious cabin 005. Designed to accommodate up to 6 people, this cabin offers a secluded retreat in the heart of nature. Inside, the cabin features warm and inviting interiors crafted from quality wood, a living area with fireplace, and a fully-equipped kitchen. The bedrooms are comfortable and equipped with en-suite bathrooms. Step outside to your private deck and take in the natural surroundings while relaxing in your own hot tub.",
   },
   {
-    name: "006",
+    id: 6,
+    name: "Mountain View",
     maxCapacity: 6,
     regularPrice: 800,
     discount: 100,
-    image: imageUrl + "cabin-006.webp",
+    image: "/cabins/cabin-006.webp",
     description:
       "Experience the epitome of luxury with your group or family in our spacious wooden cabin 006. Designed to comfortably accommodate up to 6 people, this cabin offers a lavish retreat in the heart of nature. Inside, the cabin features opulent interiors crafted from premium wood, a grand living area with fireplace, and a fully-equipped gourmet kitchen. The bedrooms are adorned with plush beds and spa-like en-suite bathrooms. Step outside to your private deck and soak in the natural surroundings while relaxing in your own hot tub.",
   },
   {
-    name: "007",
+    id: 7,
+    name: "Summit Lodge",
     maxCapacity: 8,
     regularPrice: 600,
     discount: 100,
-    image: imageUrl + "cabin-007.webp",
+    image: "/cabins/cabin-007.webp",
     description:
       "Accommodate your large group or multiple families in the spacious and grand wooden cabin 007. Designed to comfortably fit up to 8 people, this cabin offers a secluded retreat in the heart of beautiful forests and mountains. Inside, the cabin features warm and inviting interiors crafted from quality wood, multiple living areas with fireplace, and a fully-equipped kitchen. The bedrooms are comfortable and equipped with en-suite bathrooms. The cabin has a private deck with a hot tub and outdoor seating area, perfect for taking in the natural surroundings.",
   },
   {
-    name: "008",
+    id: 8,
+    name: "Grand Forest Chalet",
     maxCapacity: 10,
     regularPrice: 1400,
     discount: 0,
-    image: imageUrl + "cabin-008.webp",
+    image: "/cabins/cabin-008.webp",
     description:
       "Experience the epitome of luxury and grandeur with your large group or multiple families in our grand cabin 008. This cabin offers a lavish retreat that caters to all your needs and desires. The cabin features an opulent design and boasts of high-end finishes, intricate details and the finest quality wood throughout. Inside, the cabin features multiple grand living areas with fireplaces, a formal dining area, and a gourmet kitchen that is a chef's dream. The bedrooms are designed for ultimate comfort and luxury, with plush beds and en-suite spa-inspired bathrooms. Step outside and immerse yourself in the beauty of nature from your private deck, featuring a luxurious hot tub and ample seating areas for ultimate relaxation and enjoyment.",
+  },
+  {
+    id: 9,
+    name: "Whispering Pines",
+    maxCapacity: 2,
+    regularPrice: 280,
+    discount: 20,
+    image: "/cabins/cabin-001.webp",
+    description:
+      "An intimate hideaway nestled amongst high-elevation whispering pines. Features modern timber craftsmanship, a private wood-fired cedar hot tub on the open deck, and floor-to-ceiling glass framing quiet alpine sunrise vistas.",
+  },
+  {
+    id: 10,
+    name: "Silver Spruce",
+    maxCapacity: 4,
+    regularPrice: 420,
+    discount: 0,
+    image: "/cabins/cabin-002.webp",
+    description:
+      "Surrounded by ancient silver spruce trees, this cabin blends rustic timber with refined elegance. Includes two master suites, a central stone hearth fireplace, an open chef kitchen, and a private hot tub under the Dolomite stars.",
+  },
+  {
+    id: 11,
+    name: "Golden Crest",
+    maxCapacity: 6,
+    regularPrice: 650,
+    discount: 50,
+    image: "/cabins/cabin-003.webp",
+    description:
+      "Expansive multi-level alpine lodge featuring heated slate floors, cathedral timber ceilings, a private outdoor barrel sauna, and sweeping views of the craggy limestone peaks across the valley.",
+  },
+  {
+    id: 12,
+    name: "Aurora Peak Lodge",
+    maxCapacity: 12,
+    regularPrice: 1600,
+    discount: 150,
+    image: "/cabins/cabin-004.webp",
+    description:
+      "Our premier estate chalet accommodating up to 12 guests in grand alpine luxury. Features five en-suite bedrooms, dual living lounges, private wellness spa pavilion, outdoor cedar plunge pool, and bespoke mountain hospitality.",
   },
 ];

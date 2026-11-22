@@ -52,7 +52,7 @@ export default function UserDashboardPage() {
       </div>
 
       {/* Action Banners */}
-      <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="mt-10 grid grid-cols-2 gap-6 md:grid-cols-3">
         <div className="bg-bg-surface p-8">
           <h2 className="text-xl font-medium text-text-primary">
             Active Reservation

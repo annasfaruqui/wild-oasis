@@ -1,8 +1,16 @@
+import { Footer } from "@/components/layout/footer";
+import { Navbar } from "@/components/layout/navbar";
+
 export default function LandingPageLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  // Add like Navbar and footer here
-  return <>{children}</>;
+  return (
+    <>
+      <Navbar sticky={true} />
+      {children}
+      <Footer />
+    </>
+  );
 }

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 import logoImage from "@public/brand/logo.webp";
 
 export default function AuthLayout({
@@ -10,10 +9,6 @@ export default function AuthLayout({
 }) {
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center bg-bg-primary p-6 text-text-primary transition-colors duration-200 selection:bg-action-primary selection:text-action-text">
-      <div className="absolute top-6 right-6">
-        <ThemeToggle />
-      </div>
-
       <Link
         href="/"
         className="mb-8 flex items-center gap-3 focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"

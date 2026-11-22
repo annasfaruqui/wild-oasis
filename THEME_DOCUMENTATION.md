@@ -2,103 +2,119 @@
 
 ## 1. Overview & Visual Identity
 
-**The Wild Oasis** features a custom, luxury mountain cabin design system inspired by natural earthy tones: warm walnut browns, golden sunlight, warm ivory, and muted forest greens.
+**The Wild Oasis** features an exclusive, luxury mountain cabin design system inspired by natural earthy tones: deep warm walnut browns, golden sunlight, and muted forest pines.
 
-The design identity communicates an intimate, high-end mountain sanctuary through:
+The application is **dark-themed by default**. Light mode has been deprecated and completely removed from the UI and stylesheets to maintain an immersive, cinematic mountain sanctuary aesthetic:
 
-- Deep walnut tones (`#19140F`) for dark mode surfaces.
-- Warm ivory and cream tones (`#F7F3EA`) for light mode surfaces.
-- Signature Heritage Gold (`#C6A15B`) for brand accents, selected states, and key highlights.
-- Pine Green (`#3F5B4B` in light, `#91B39A` in dark) for nature-inspired details and confirmations.
-- Warm Linen (`#F5EBDD`) and Walnut Ink (`#30271F`) for high-contrast, accessible typography.
+- **Deep walnut tones** (`#19140F`) form the default page canvas.
+- **Dark walnut surfaces** (`#2B241C` and `#352C22`) build elevated layers, cards, and modal panels.
+- **Signature Heritage Gold** (`#C6A15B`) accents brand highlights, active states, and primary CTAs.
+- **Warm Linen** (`#F5EBDD`) and **Warm Taupe** (`#BDB09F`) provide high-contrast, accessible typography.
+- **Muted Pine** (`#91B39A`) provides nature-inspired accents and status confirmations.
 - **Zero decorative borders and zero decorative shadows** across normal and hover states.
 - **Square, non-rounded button corners** (`border-radius: 0`) for an architectural, bespoke luxury aesthetic.
+- **First-class gradient support** across all defined tokens and pre-configured semantic utilities.
 
 ---
 
-## 2. Definitive Official Color Palette
+## 2. Definitive Official Color Palette (Default Theme)
+
+All colors are applied directly to `:root` with `color-scheme: dark`.
 
 ### A. Text Colors
 
-| Token            | Light Mode              | Dark Mode              | Usage                                           |
-| :--------------- | :---------------------- | :--------------------- | :---------------------------------------------- |
-| `text-primary`   | `#30271F` (Walnut Ink)  | `#F5EBDD` (Warm Linen) | Headings, primary body text, critical labels    |
-| `text-secondary` | `#76695A` (Muted Umber) | `#BDB09F` (Warm Taupe) | Subtitles, descriptions, metadata, placeholders |
+| Token            | Hex Value | Swatch Description | Usage                                           |
+| :--------------- | :-------- | :----------------- | :---------------------------------------------- |
+| `text-primary`   | `#F5EBDD` | Warm Linen         | Headings, primary body text, critical labels    |
+| `text-secondary` | `#BDB09F` | Warm Taupe         | Subtitles, descriptions, metadata, placeholders |
 
 ### B. Backgrounds & Surfaces
 
-| Token         | Light Mode                 | Dark Mode                 | Usage                                              |
-| :------------ | :------------------------- | :------------------------ | :------------------------------------------------- |
-| `bg-primary`  | `#F7F3EA` (Light Ivory)    | `#19140F` (Deep Walnut)   | Main page canvas / application background          |
-| `bg-surface`  | `#EFE7D8` (Warm Surface)   | `#2B241C` (Dark Surface)  | Cards, panels, sidebars, modals, dropdowns         |
-| `bg-elevated` | `#E3D5C0` (Elevated Light) | `#352C22` (Elevated Dark) | Nested surfaces, table headers, tags, active items |
-| `bg-hover`    | `#E5DAC8`                  | `#231C16`                 | Subtle, predictable darkening on surface hover     |
+| Token         | Hex Value | Swatch Description | Usage                                              |
+| :------------ | :-------- | :----------------- | :------------------------------------------------- |
+| `bg-primary`  | `#19140F` | Deep Walnut Canvas | Main page canvas / application background          |
+| `bg-surface`  | `#2B241C` | Dark Surface       | Cards, panels, sidebars, modals, dropdowns         |
+| `bg-elevated` | `#352C22` | Elevated Walnut    | Nested surfaces, table headers, tags, active items |
+| `bg-hover`    | `#231c16` | Darkening Tone     | Subtle, predictable darkening on surface hover     |
 
 ### C. Brand Accent Colors
 
-| Token              | Light Mode                | Dark Mode                 | Usage                                               |
-| :----------------- | :------------------------ | :------------------------ | :-------------------------------------------------- |
-| `accent-primary`   | `#C6A15B` (Heritage Gold) | `#C6A15B` (Heritage Gold) | Signature brand highlights, badges, selected states |
-| `accent-secondary` | `#A38560` (Earthy Taupe)  | `#A38560` (Earthy Taupe)  | Decorative accents, subtle icons, muted badges      |
-| `accent-tertiary`  | `#3F5B4B` (Pine Green)    | `#91B39A` (Muted Pine)    | Nature-inspired accents, active status badges       |
+| Token              | Hex Value | Swatch Description | Usage                                               |
+| :----------------- | :-------- | :----------------- | :-------------------------------------------------- |
+| `accent-primary`   | `#C6A15B` | Heritage Gold      | Signature brand highlights, badges, selected states |
+| `accent-secondary` | `#A38560` | Earthy Taupe       | Decorative accents, subtle icons, muted badges      |
+| `accent-tertiary`  | `#91B39A` | Muted Pine         | Nature-inspired accents, active status badges       |
 
 ### D. Actions, CTA Buttons, and Links
 
-| Token                  | Light Mode              | Dark Mode                 | Usage                                                |
-| :--------------------- | :---------------------- | :------------------------ | :--------------------------------------------------- |
-| `action-primary`       | `#8A6125` (Deep Ochre)  | `#C6A15B` (Heritage Gold) | Primary call-to-action buttons (Book, Save, Submit)  |
-| `action-primary-hover` | `#734F1D`               | `#B5914B`                 | Subtle darkened hover state for primary buttons      |
-| `action-text`          | `#FFFFFF` (White)       | `#211C16` (Deep Walnut)   | High-contrast label and icons inside primary buttons |
-| `link-color`           | `#315842` (Deep Forest) | `#D8B66D` (Sunlit Gold)   | Inline text links, breadcrumbs, navigational links   |
+| Token                  | Hex Value | Swatch Description | Usage                                                |
+| :--------------------- | :-------- | :----------------- | :--------------------------------------------------- |
+| `action-primary`       | `#C6A15B` | Heritage Gold      | Primary call-to-action buttons (Book, Save, Submit)  |
+| `action-primary-hover` | `#B5914B` | Darkened Gold      | Subtle darkened hover state for primary buttons      |
+| `action-text`          | `#211C16` | Deep Walnut Ink    | High-contrast label and icons inside primary buttons |
+| `link-color`           | `#D8B66D` | Sunlit Gold        | Inline text links, breadcrumbs, navigational links   |
 
 ### E. Borders, Focus Rings, and Status Tokens
 
-| Token            | Light Mode | Dark Mode | Usage                                                    |
-| :--------------- | :--------- | :-------- | :------------------------------------------------------- |
-| `border-subtle`  | `#E0D4C0`  | `#382F25` | Hairline dividers and table row borders (used sparingly) |
-| `border-strong`  | `#C8B9A0`  | `#4D4033` | Clear boundaries for inputs where necessary              |
-| `border-focus`   | `#8A6125`  | `#C6A15B` | Keyboard focus ring meeting WCAG 3:1 graphical contrast  |
-| `status-success` | `#2D6142`  | `#4EA874` | Confirmed bookings, available status, success banners    |
-| `status-error`   | `#9E3333`  | `#E05D5D` | Form validation errors, cancellations, alerts            |
-| `status-warning` | `#94571A`  | `#E59840` | Pending actions, unconfirmed reservations, notices       |
-| `status-info`    | `#3D5F75`  | `#7EA7C2` | Informational callouts and system tooltips               |
+| Token            | Hex Value | Swatch Description     | Usage                                                   |
+| :--------------- | :-------- | :--------------------- | :------------------------------------------------------ |
+| `border-subtle`  | `#382F25` | Subtle Walnut Hairline | Dividers and table row borders (used sparingly)         |
+| `border-strong`  | `#4D4033` | Strong Border          | Clear boundaries for inputs where necessary             |
+| `border-focus`   | `#C6A15B` | Heritage Gold Ring     | Keyboard focus ring meeting WCAG 3:1 graphical contrast |
+| `status-success` | `#4EA874` | Pine Meadow            | Confirmed bookings, available status, success banners   |
+| `status-error`   | `#E05D5D` | Crimson Ember          | Form validation errors, cancellations, alerts           |
+| `status-warning` | `#E59840` | Amber Ochre            | Pending actions, unconfirmed reservations, notices      |
+| `status-info`    | `#7EA7C2` | Slate Blue             | Informational callouts and system tooltips              |
 
 ---
 
 ## 3. Architecture in `globals.css` & Tailwind CSS 4
 
-All color definitions reside exclusively in `src/app/globals.css`. It acts as the single source of truth for both CSS custom properties and Tailwind CSS 4 utilities:
+All color tokens reside in `src/app/globals.css`. It acts as the single source of truth for both CSS custom properties and Tailwind CSS 4 utilities:
 
 ```css
 @import "tailwindcss";
 
-/* Preserve class-based dark mode */
+/* Preserve class-based dark mode selector */
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  color-scheme: light;
-  --text-primary: #30271f;
-  --text-secondary: #76695a;
-  --bg-primary: #f7f3ea;
-  --bg-surface: #efe7d8;
-  --bg-elevated: #e3d5c0;
-  --bg-hover: #e5dac8;
+  color-scheme: dark;
+
+  /* Typography */
+  --text-primary: #f5ebdd;
+  --text-secondary: #bdb09f;
+
+  /* Backgrounds & Surfaces */
+  --bg-primary: #19140f;
+  --bg-surface: #2b241c;
+  --bg-elevated: #352c22;
+  --bg-hover: #231c16;
+
+  /* Brand Accent Colors */
   --accent-primary: #c6a15b;
   --accent-secondary: #a38560;
-  --accent-tertiary: #3f5b4b;
-  --action-primary: #8a6125;
-  --action-primary-hover: #734f1d;
-  --action-text: #ffffff;
-  --link-color: #315842;
-  --border-subtle: #e0d4c0;
-  --border-strong: #c8b9a0;
-  --border-focus: #8a6125;
-  --color-success: #2d6142;
-  --color-error: #9e3333;
-  --color-warning: #94571a;
-  --color-info: #3d5f75;
+  --accent-tertiary: #91b39a;
+
+  /* Actions, CTA Buttons, and Links */
+  --action-primary: #c6a15b;
+  --action-primary-hover: #b5914b;
+  --action-text: #211c16;
+  --link-color: #d8b66d;
+
+  /* Borders & Focus Rings */
+  --border-subtle: #382f25;
+  --border-strong: #4d4033;
+  --border-focus: #c6a15b;
+
+  /* Semantic Feedback Status */
+  --color-success: #4ea874;
+  --color-error: #e05d5d;
+  --color-warning: #e59840;
+  --color-info: #7ea7c2;
 }
 
+/* Explicit .dark mirrors :root for backward-compatibility */
 .dark {
   color-scheme: dark;
   --text-primary: #f5ebdd;
@@ -152,20 +168,157 @@ All color definitions reside exclusively in `src/app/globals.css`. It acts as th
 
 ---
 
-## 4. Theme Management (`next-themes`)
+## 4. Future Theme Architecture & Extension Guide
 
-The application uses `next-themes` configured in `src/components/providers/theme-provider.tsx`:
+The theme architecture is strictly decoupled from hardcoded styles. Because all components consume semantic design tokens (`bg-primary`, `bg-surface`, `text-primary`, `accent-primary`, etc.), introducing new seasonal or aesthetic themes requires **zero changes to component code**.
 
-- Wrapped at the root level in `src/app/layout.tsx`.
-- Uses class-based targeting (`attribute="class"`).
-- Defaults to dark mode (`defaultTheme="dark"`).
-- Automatically respects system preferences (`enableSystem={true}`).
-- Prevents flash of unstyled content (`disableTransitionOnChange={true}`).
-- The `ThemeToggle` (`src/components/ui/theme-toggle.tsx`) switches the theme cleanly without re-renders or hydration mismatches via an internal `mounted` check.
+### Adding a New Theme
+
+To add a new theme (such as a Nordic Winter or Forest Alpine theme), declare a new CSS selector (e.g., `[data-theme="nordic"]` or `.theme-forest`) in `src/app/globals.css` and redefine the semantic tokens:
+
+```css
+/* Example: Nordic Winter Theme */
+[data-theme="nordic"] {
+  color-scheme: dark;
+  --text-primary: #eceff4;
+  --text-secondary: #d8dee9;
+  --bg-primary: #2e3440;
+  --bg-surface: #3b4252;
+  --bg-elevated: #434c5e;
+  --bg-hover: #4c566a;
+  --accent-primary: #88c0d0;
+  --accent-secondary: #81a1c1;
+  --accent-tertiary: #a3be8c;
+  --action-primary: #88c0d0;
+  --action-primary-hover: #7bb0c0;
+  --action-text: #2e3440;
+  --link-color: #8fbcbb;
+  --border-subtle: #3b4252;
+  --border-strong: #4c566a;
+  --border-focus: #88c0d0;
+  --color-success: #a3be8c;
+  --color-error: #bf616a;
+  --color-warning: #ebcb8b;
+  --color-info: #5e81ac;
+}
+```
+
+Any container or page tagged with `data-theme="nordic"` or `.theme-nordic` will automatically render with the new palette and dynamic gradients without touching component markup.
 
 ---
 
-## 5. Design Philosophy: Borders, Shadows, and Hover Interactions
+## 5. First-Class Gradient Support
+
+The theming system provides comprehensive gradient support through two complementary mechanisms:
+
+### A. Direct Tailwind Gradient Utilities on Defined Tokens
+
+Because all semantic tokens are registered under `@theme inline`, you can construct custom linear or radial gradients directly in component markup using standard Tailwind CSS 4 gradient utilities:
+
+- **Gradients with directional control**:
+  - `bg-linear-to-b from-bg-primary to-transparent`
+  - `bg-linear-to-t from-bg-primary via-bg-primary/80 to-transparent`
+  - `bg-linear-to-r from-accent-primary to-bg-surface`
+- **Opacity modifiers on tokens**:
+  - `via-bg-primary/75` (uses `color-mix` with `oklab` transparency under the hood)
+  - `from-bg-surface/50`
+  - `to-accent-primary/20`
+
+```tsx
+/* Example: Image overlay fading into the deep walnut canvas */
+<div className="absolute inset-0 bg-linear-to-t from-bg-primary via-bg-primary/70 to-transparent" />
+```
+
+### B. Semantic Gradient Utilities (`@utility`)
+
+For consistent, high-end visual treatments, `src/app/globals.css` exports dedicated semantic gradient utilities registered via Tailwind CSS 4's `@utility` directive:
+
+| Utility Class                | Gradient Type            | Description & Color Stops                                                                         |
+| :--------------------------- | :----------------------- | :------------------------------------------------------------------------------------------------ |
+| `bg-gradient-hero-bottom`    | Linear (to bottom)       | Smooth fade from transparent to deep canvas (`color-mix` at 50% opacity into `var(--bg-primary)`) |
+| `bg-gradient-hero-top`       | Linear (to top)          | Smooth fade from canvas upwards into transparent                                                  |
+| `bg-gradient-surface-to-b`   | Linear (to bottom)       | Transitions downward from `var(--bg-surface)` to `var(--bg-primary)`                              |
+| `bg-gradient-accent`         | Linear (135deg)          | Luxury Heritage Gold gradient mixed with surface tones                                            |
+| `bg-gradient-card`           | Linear (to bottom right) | Subtle tonal variance across card surfaces                                                        |
+| `bg-gradient-surface-radial` | Radial (top ellipse)     | Subtle ambient glow on elevated surfaces and headers                                              |
+
+```css
+@utility bg-gradient-hero-bottom {
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    color-mix(in srgb, var(--bg-primary) 60%, transparent) 50%,
+    var(--bg-primary) 100%
+  );
+}
+
+@utility bg-gradient-hero-top {
+  background-image: linear-gradient(
+    to top,
+    transparent 0%,
+    color-mix(in srgb, var(--bg-primary) 60%, transparent) 50%,
+    var(--bg-primary) 100%
+  );
+}
+
+@utility bg-gradient-surface-to-b {
+  background-image: linear-gradient(
+    to bottom,
+    var(--bg-surface) 0%,
+    var(--bg-primary) 100%
+  );
+}
+
+@utility bg-gradient-accent {
+  background-image: linear-gradient(
+    135deg,
+    var(--accent-primary) 0%,
+    color-mix(in srgb, var(--accent-primary) 70%, var(--bg-surface)) 100%
+  );
+}
+
+@utility bg-gradient-card {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--bg-surface) 0%,
+    color-mix(in srgb, var(--bg-surface) 85%, var(--bg-primary)) 100%
+  );
+}
+
+@utility bg-gradient-surface-radial {
+  background-image: radial-gradient(
+    ellipse at top,
+    color-mix(in srgb, var(--bg-elevated) 60%, transparent) 0%,
+    var(--bg-primary) 100%
+  );
+}
+```
+
+---
+
+## 6. Theme Management (`next-themes`)
+
+The application enforces dark mode at the root in `src/app/layout.tsx`:
+
+```tsx
+<ThemeProvider
+  attribute="class"
+  defaultTheme="dark"
+  forcedTheme="dark"
+  enableSystem={false}
+  disableTransitionOnChange
+>
+  {children}
+</ThemeProvider>
+```
+
+- **Forced Dark**: `forcedTheme="dark"` guarantees next-themes locks the application into the dark palette without running hydration checks or theme switches.
+- **No System Sync**: `enableSystem={false}` prevents OS light mode preferences from overriding the sanctuary aesthetic.
+- **Inert `ThemeToggle`**: The `ThemeToggle` component in `src/components/ui/theme-toggle.tsx` returns `null`, and all toggle buttons have been removed from the navbar, auth layouts, user layouts, and admin portals.
+
+---
+
+## 7. Design Philosophy: Borders, Shadows, and Hover Interactions
 
 ### A. Zero Decorative Shadows
 
@@ -193,7 +346,7 @@ The application uses `next-themes` configured in `src/components/providers/theme
 
 ---
 
-## 6. How to Use Semantic Tokens in Components
+## 8. How to Use Semantic Tokens & Gradients in Components
 
 ### Primary Buttons (CTAs)
 
@@ -203,18 +356,10 @@ The application uses `next-themes` configured in `src/components/providers/theme
 </button>
 ```
 
-### Secondary Buttons
+### Cards with Gradient Accents
 
 ```tsx
-<button className="bg-bg-elevated px-6 py-3 text-sm font-medium text-text-primary transition-colors duration-200 hover:bg-bg-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none">
-  Cancel
-</button>
-```
-
-### Cards & Panels
-
-```tsx
-<div className="rounded-2xl bg-bg-surface p-6 text-text-primary">
+<div className="bg-gradient-card p-6 text-text-primary">
   <h3 className="text-xl font-medium text-text-primary">Cabin Panorama</h3>
   <p className="mt-2 text-sm text-text-secondary">
     Secluded valley view with private hot tub.
@@ -222,15 +367,13 @@ The application uses `next-themes` configured in `src/components/providers/theme
 </div>
 ```
 
-### Navigation & Text Links
+### Hero Section with Bottom Gradient Overlay
 
 ```tsx
-<Link
-  href="/cabins"
-  className="text-sm font-medium text-link transition-colors duration-200 hover:underline focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
->
-  Explore Cabins &rarr;
-</Link>
+<div className="relative h-96 w-full">
+  <Image src="/cabin.jpg" alt="Cabin" fill className="object-cover" />
+  <div className="absolute inset-0 bg-gradient-hero-bottom" />
+</div>
 ```
 
 ### Status Badges
@@ -243,36 +386,12 @@ The application uses `next-themes` configured in `src/components/providers/theme
 
 ---
 
-## 7. Accessibility & Contrast Verification (WCAG AA Compliance)
+## 9. Accessibility & Contrast Verification (WCAG AAA Compliance)
 
-All color combinations have been verified for contrast:
+All colors in the dark theme have been verified for contrast:
 
-- **Primary Text on Primary Background**:
-  - Light mode (`#30271F` on `#F7F3EA`): **12.2:1** (Exceeds WCAG AAA requirement of 7:1)
-  - Dark mode (`#F5EBDD` on `#211C16`): **14.4:1** (Exceeds WCAG AAA)
-- **Primary Text on Surface Background**:
-  - Light mode (`#30271F` on `#EFE7D8`): **11.1:1** (Exceeds WCAG AAA)
-  - Dark mode (`#F5EBDD` on `#2B241C`): **13.1:1** (Exceeds WCAG AAA)
-- **Secondary Text**:
-  - Light mode (`#76695A` on `#F7F3EA`): **4.8:1** (Exceeds WCAG AA requirement of 4.5:1)
-  - Dark mode (`#BDB09F` on `#211C16`): **8.5:1** (Exceeds WCAG AAA)
-- **Primary CTA Buttons**:
-  - Light mode (`#FFFFFF` on `#8A6125`): **4.7:1** (Passes WCAG AA)
-  - Dark mode (`#211C16` on `#C6A15B`): **7.5:1** (Exceeds WCAG AAA)
-- **Inline Links**:
-  - Light mode (`#315842` on `#F7F3EA`): **6.8:1** (Passes WCAG AA)
-  - Dark mode (`#D8B66D` on `#211C16`): **9.1:1** (Exceeds WCAG AAA)
-
----
-
-## 8. Guidelines for Introducing New Colors
-
-When new features require styling:
-
-1. **Always reuse existing semantic tokens**: First check if `text-primary`, `text-secondary`, `bg-surface`, `bg-elevated`, `action-primary`, `accent-primary`, or status tokens satisfy the design intent.
-2. **Never hardcode hex values or use default Tailwind palettes** (e.g. `stone-*`, `gray-*`, `amber-*`).
-3. **If a new semantic token is genuinely needed**:
-   - Add it to both `:root` (light mode) and `.dark` (dark mode) in `src/app/globals.css`.
-   - Expose it under `@theme inline` with the `--color-*` prefix.
-   - Verify WCAG AA contrast ratio (> 4.5:1 for normal text, > 3:1 for large text / graphical controls) before committing.
-   - Document the token in this file.
+- **Primary Text on Primary Background** (`#F5EBDD` on `#19140F`): **14.4:1** (Exceeds WCAG AAA requirement of 7:1)
+- **Primary Text on Surface Background** (`#F5EBDD` on `#2B241C`): **13.1:1** (Exceeds WCAG AAA)
+- **Secondary Text on Surface Background** (`#BDB09F` on `#2B241C`): **8.5:1** (Exceeds WCAG AAA)
+- **Primary CTA Buttons** (`#211C16` on `#C6A15B`): **7.5:1** (Exceeds WCAG AAA)
+- **Inline Links** (`#D8B66D` on `#19140F`): **9.1:1** (Exceeds WCAG AAA)

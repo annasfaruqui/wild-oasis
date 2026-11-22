@@ -6,54 +6,17 @@
 /* ==========================================================================
    CENTRAL DESIGN SYSTEM: WALNUT & HERITAGE GOLD
    Single source of truth for all application colors.
+   Default theme is exclusively Dark Mode (color-scheme: dark).
    ========================================================================== */
 
-/* Light theme */
 :root {
-  color-scheme: light;
-
-  /* Typography */
-  --text-primary: #30271f;
-  --text-secondary: #76695a;
-
-  /* Backgrounds & Surfaces */
-  --bg-primary: #f7f3ea;
-  --bg-surface: #efe7d8;
-  --bg-elevated: #e3d5c0;
-  --bg-hover: #e5dac8;
-
-  /* Brand Accent Colors */
-  --accent-primary: #c6a15b;
-  --accent-secondary: #a38560;
-  --accent-tertiary: #3f5b4b;
-
-  /* Actions, CTA Buttons, and Links */
-  --action-primary: #8a6125;
-  --action-primary-hover: #734f1d;
-  --action-text: #ffffff;
-  --link-color: #315842;
-
-  /* Borders & Focus Rings (Subtle & Zero-Border Philosophy) */
-  --border-subtle: #e0d4c0;
-  --border-strong: #c8b9a0;
-  --border-focus: #8a6125;
-
-  /* Semantic Feedback Status */
-  --color-success: #2d6142;
-  --color-error: #9e3333;
-  --color-warning: #94571a;
-  --color-info: #3d5f75;
-}
-
-/* Dark theme */
-.dark {
   color-scheme: dark;
 
   /* Typography */
   --text-primary: #f5ebdd;
   --text-secondary: #bdb09f;
 
-  /* Backgrounds & Surfaces (Made bg-primary richer & darker deep walnut) */
+  /* Backgrounds & Surfaces (Rich, deep walnut mountain sanctuary) */
   --bg-primary: #19140f;
   --bg-surface: #2b241c;
   --bg-elevated: #352c22;
@@ -81,6 +44,67 @@
   --color-warning: #e59840;
   --color-info: #7ea7c2;
 }
+
+/* Explicit .dark class mirrors :root for backward-compatibility with class-based selectors */
+.dark {
+  color-scheme: dark;
+
+  --text-primary: #f5ebdd;
+  --text-secondary: #bdb09f;
+  --bg-primary: #19140f;
+  --bg-surface: #2b241c;
+  --bg-elevated: #352c22;
+  --bg-hover: #231c16;
+  --accent-primary: #c6a15b;
+  --accent-secondary: #a38560;
+  --accent-tertiary: #91b39a;
+  --action-primary: #c6a15b;
+  --action-primary-hover: #b5914b;
+  --action-text: #211c16;
+  --link-color: #d8b66d;
+  --border-subtle: #382f25;
+  --border-strong: #4d4033;
+  --border-focus: #c6a15b;
+  --color-success: #4ea874;
+  --color-error: #e05d5d;
+  --color-warning: #e59840;
+  --color-info: #7ea7c2;
+}
+
+/* ==========================================================================
+   FUTURE THEME EXTENSION GUIDE
+   --------------------------------------------------------------------------
+   The Wild Oasis uses semantic design tokens mapped through CSS custom
+   properties. All UI components reference these tokens, not hardcoded colors.
+
+   To introduce a new theme (e.g. Nordic Winter, Forest Pine, Midnight):
+   Simply declare a new CSS selector (such as `[data-theme="nordic"]` or `.theme-forest`)
+   and override the semantic custom properties below:
+
+   [data-theme="nordic"] {
+     color-scheme: dark;
+     --text-primary: #ECEFF4;
+     --text-secondary: #D8DEE9;
+     --bg-primary: #2E3440;
+     --bg-surface: #3B4252;
+     --bg-elevated: #434C5E;
+     --bg-hover: #4C566A;
+     --accent-primary: #88C0D0;
+     --accent-secondary: #81A1C1;
+     --accent-tertiary: #A3BE8C;
+     --action-primary: #88C0D0;
+     --action-primary-hover: #7BB0C0;
+     --action-text: #2E3440;
+     --link-color: #8FBCBB;
+     --border-subtle: #3B4252;
+     --border-strong: #4C566A;
+     --border-focus: #88C0D0;
+     --color-success: #A3BE8C;
+     --color-error: #BF616A;
+     --color-warning: #EBCB8B;
+     --color-info: #5E81AC;
+   }
+   ========================================================================== */
 
 /* Expose semantic colors to Tailwind CSS 4 */
 @theme inline {
@@ -125,12 +149,116 @@
   --color-status-info: var(--color-info);
 }
 
+/* ==========================================================================
+   SEMANTIC GRADIENTS (Tailwind CSS 4 @utility)
+   First-class gradient support computed directly from semantic theme tokens.
+   ========================================================================== */
+
+@utility bg-gradient-hero-bottom {
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    color-mix(in srgb, var(--bg-primary) 60%, transparent) 50%,
+    var(--bg-primary) 100%
+  );
+}
+
+@utility bg-gradient-hero-top {
+  background-image: linear-gradient(
+    to top,
+    transparent 0%,
+    color-mix(in srgb, var(--bg-primary) 60%, transparent) 50%,
+    var(--bg-primary) 100%
+  );
+}
+
+@utility bg-gradient-surface-to-b {
+  background-image: linear-gradient(
+    to bottom,
+    var(--bg-surface) 0%,
+    var(--bg-primary) 100%
+  );
+}
+
+@utility bg-gradient-accent {
+  background-image: linear-gradient(
+    135deg,
+    var(--accent-primary) 0%,
+    color-mix(in srgb, var(--accent-primary) 70%, var(--bg-surface)) 100%
+  );
+}
+
+@utility bg-gradient-card {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--bg-surface) 0%,
+    color-mix(in srgb, var(--bg-surface) 85%, var(--bg-primary)) 100%
+  );
+}
+
+@utility bg-gradient-surface-radial {
+  background-image: radial-gradient(
+    ellipse at top,
+    color-mix(in srgb, var(--bg-elevated) 60%, transparent) 0%,
+    var(--bg-primary) 100%
+  );
+}
+
 /* Strict Zero-Shadows and Non-Rounded Buttons across application */
 *,
 *::before,
 *::after {
   box-shadow: none !important;
   text-shadow: none !important;
+}
+
+/* ==========================================================================
+   THEMED APPLICATION SCROLLBAR
+   Standard and WebKit custom scrollbar matching the dark walnut theme.
+   Uses semantic tokens so future themes automatically style the scrollbars.
+   ========================================================================== */
+
+/* Firefox standard scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) var(--bg-primary);
+}
+
+/* WebKit / Chromium / Edge / Safari scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--border-strong);
+  border-radius: 4px;
+  border: 2px solid var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-secondary);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--bg-primary);
+}
+
+/* ==========================================================================
+   SCROLLBAR UTILITIES
+   Allows internal scrollable containers to hide scrollbars completely.
+   ========================================================================== */
+
+@utility no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 }
 
 button,

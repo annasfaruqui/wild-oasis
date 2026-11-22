@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 import logoImage from "@public/brand/logo.webp";
 
 const adminNavItems = [
@@ -60,11 +59,6 @@ export default function AdminLayout({
 
         {/* Sidebar Footer */}
         <div className="space-y-4 pt-6">
-          <div className="flex items-center justify-between">
-            <span className="text-xs text-text-secondary">Theme</span>
-            <ThemeToggle />
-          </div>
-
           <div className="rounded-xl bg-bg-elevated p-3 text-xs">
             <span className="font-semibold text-text-primary">
               Jonas Schmedtmann

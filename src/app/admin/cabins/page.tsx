@@ -1,33 +1,4 @@
-const mockCabins = [
-  {
-    id: 1,
-    name: "001 — Timber Ridge",
-    maxCapacity: 2,
-    regularPrice: 250,
-    discount: 0,
-  },
-  {
-    id: 2,
-    name: "002 — Pine Hollow",
-    maxCapacity: 4,
-    regularPrice: 350,
-    discount: 25,
-  },
-  {
-    id: 3,
-    name: "003 — Alpine Loft",
-    maxCapacity: 6,
-    regularPrice: 450,
-    discount: 50,
-  },
-  {
-    id: 4,
-    name: "004 — Eagle Crest",
-    maxCapacity: 8,
-    regularPrice: 550,
-    discount: 0,
-  },
-];
+import { cabins } from "@/data/data-cabins";
 
 export default function AdminCabinsPage() {
   return (
@@ -62,12 +33,12 @@ export default function AdminCabinsPage() {
             </tr>
           </thead>
           <tbody className="divide-y divide-border-subtle">
-            {mockCabins.map((cabin) => (
+            {cabins.map((cabin) => (
               <tr
                 key={cabin.id}
                 className="text-text-primary transition-colors hover:bg-bg-hover"
               >
-                <td className="p-4 font-medium">{cabin.name}</td>
+                <td className="p-4 font-medium">Cabin {cabin.name}</td>
                 <td className="p-4 text-text-secondary">
                   Fits up to {cabin.maxCapacity} guests
                 </td>
