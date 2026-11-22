@@ -8,7 +8,7 @@ import about2Image from "@public/about/about-2.webp";
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col bg-bg-primary text-text-primary selection:bg-brand-accent selection:text-primary-950 transition-colors duration-200">
+    <div className="flex min-h-screen flex-col bg-bg-primary text-text-primary transition-colors duration-200 selection:bg-brand-accent selection:text-primary-950">
       <Navbar />
 
       {/* Hero Section */}
@@ -26,13 +26,13 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-linear-to-b from-primary-950/60 via-transparent to-primary-950/90" />
 
         <div className="relative z-10 max-w-4xl space-y-6 pt-20">
-          <span className="inline-block rounded-full border border-brand-accent/30 bg-primary-950/70 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-accent-300 backdrop-blur-md">
+          <span className="inline-block rounded-full border border-brand-accent/30 bg-primary-950/70 px-4 py-1.5 text-xs font-medium tracking-widest text-accent-300 uppercase backdrop-blur-md">
             The Dolomites &bull; Italy
           </span>
           <h1 className="text-5xl font-light tracking-tight text-accent-50 sm:text-7xl md:text-8xl">
             Welcome to paradise.
           </h1>
-          <p className="mx-auto max-w-2xl text-base text-primary-100 sm:text-xl font-light leading-relaxed">
+          <p className="mx-auto max-w-2xl text-base leading-relaxed font-light text-primary-100 sm:text-xl">
             Where raw nature and refined comfort blend seamlessly. Disconnect
             from the noise and immerse yourself in pristine alpine wilderness.
           </p>
@@ -40,13 +40,13 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <Link
               href="/cabins"
-              className="rounded-lg bg-brand-accent px-8 py-4 text-base font-semibold text-primary-950 shadow-xl transition-all duration-300 hover:bg-brand-accent-hover hover:shadow-brand-accent/20 hover:-translate-y-0.5"
+              className="rounded-lg bg-brand-accent px-8 py-4 text-base font-semibold text-primary-950 shadow-xl transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-accent-hover hover:shadow-brand-accent/20"
             >
               Explore Luxury Cabins
             </Link>
             <Link
               href="/dashboard"
-              className="rounded-lg border border-border-subtle bg-primary-950/70 px-8 py-4 text-base font-medium text-accent-50 backdrop-blur-md transition-all duration-300 hover:bg-primary-900/90 hover:border-brand-accent"
+              className="rounded-lg border border-border-subtle bg-primary-950/70 px-8 py-4 text-base font-medium text-accent-50 backdrop-blur-md transition-all duration-300 hover:border-brand-accent hover:bg-primary-900/90"
             >
               Guest Portal
             </Link>
@@ -57,19 +57,19 @@ export default function HomePage() {
       {/* About Section */}
       <section
         id="about"
-        className="relative z-10 bg-bg-secondary py-24 sm:py-32 transition-colors duration-200"
+        className="relative z-10 bg-bg-secondary py-24 transition-colors duration-200 sm:py-32"
       >
-        <div className="mx-auto max-w-7xl px-6 lg:px-12 space-y-28">
+        <div className="mx-auto max-w-7xl space-y-28 px-6 lg:px-12">
           {/* Story 1 */}
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="space-y-6 lg:col-span-7">
-              <span className="text-xs font-semibold uppercase tracking-widest text-brand-accent">
+              <span className="text-xs font-semibold tracking-widest text-brand-accent uppercase">
                 Our Sanctuary
               </span>
               <h2 className="text-3xl font-normal tracking-tight text-text-primary sm:text-5xl">
                 Welcome to The Wild Oasis
               </h2>
-              <div className="space-y-4 text-base text-text-secondary leading-relaxed font-light">
+              <div className="space-y-4 text-base leading-relaxed font-light text-text-secondary">
                 <p>
                   Where nature&apos;s splendor and luxurious living meet in
                   harmony. Tucked away in the secluded heart of the Italian
@@ -85,7 +85,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl lg:col-span-5 aspect-4/3 border border-border-subtle">
+            <div className="relative aspect-4/3 overflow-hidden rounded-2xl border border-border-subtle shadow-2xl lg:col-span-5">
               <Image
                 src={about1Image}
                 alt="Family sitting around campfire outside wooden cabin"
@@ -99,7 +99,7 @@ export default function HomePage() {
 
           {/* Story 2 */}
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
-            <div className="relative order-2 lg:order-1 overflow-hidden rounded-2xl shadow-2xl lg:col-span-5 aspect-4/3 border border-border-subtle">
+            <div className="relative order-2 aspect-4/3 overflow-hidden rounded-2xl border border-border-subtle shadow-2xl lg:order-1 lg:col-span-5">
               <Image
                 src={about2Image}
                 alt="The family team running The Wild Oasis"
@@ -110,14 +110,14 @@ export default function HomePage() {
               />
             </div>
 
-            <div className="order-1 lg:order-2 space-y-6 lg:col-span-7">
-              <span className="text-xs font-semibold uppercase tracking-widest text-brand-accent">
+            <div className="order-1 space-y-6 lg:order-2 lg:col-span-7">
+              <span className="text-xs font-semibold tracking-widest text-brand-accent uppercase">
                 Heritage & Tradition
               </span>
               <h2 className="text-3xl font-normal tracking-tight text-text-primary sm:text-5xl">
                 Managed by our family since 1962
               </h2>
-              <div className="space-y-4 text-base text-text-secondary leading-relaxed font-light">
+              <div className="space-y-4 text-base leading-relaxed font-light text-text-secondary">
                 <p>
                   For over six decades, The Wild Oasis has remained a
                   family-guided haven. Founded by our grandparents, every corner

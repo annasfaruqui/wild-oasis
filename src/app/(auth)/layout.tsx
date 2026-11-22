@@ -9,7 +9,7 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center bg-bg-primary p-6 text-text-primary selection:bg-brand-accent selection:text-primary-950 transition-colors duration-200">
+    <div className="relative flex min-h-screen flex-col items-center justify-center bg-bg-primary p-6 text-text-primary transition-colors duration-200 selection:bg-brand-accent selection:text-primary-950">
       <div className="absolute top-6 right-6">
         <ThemeToggle />
       </div>

@@ -3,7 +3,7 @@ export default function UserProfilePage() {
   return (
     <div className="p-8">
       <h1 className="text-2xl font-semibold text-text-primary">My Profile</h1>
-      <p className="text-text-secondary mt-2">
+      <p className="mt-2 text-text-secondary">
         Update your personal information and preferences.
       </p>
     </div>

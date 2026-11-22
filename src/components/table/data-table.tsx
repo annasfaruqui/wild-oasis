@@ -29,7 +29,7 @@ export function DataTable<TData, TValue>({
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
-    [],
+    []
   );
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
@@ -67,14 +67,14 @@ export function DataTable<TData, TValue>({
             onChange={(event) =>
               table.getColumn(searchKey)?.setFilterValue(event.target.value)
             }
-            className="max-w-sm rounded-md border border-border-subtle bg-bg-secondary px-3 py-1.5 text-sm text-text-primary shadow-sm transition-colors placeholder:text-text-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-border-focus"
+            className="max-w-sm rounded-md border border-border-subtle bg-bg-secondary px-3 py-1.5 text-sm text-text-primary shadow-sm transition-colors placeholder:text-text-muted focus-visible:ring-1 focus-visible:ring-border-focus focus-visible:outline-none"
           />
         </div>
       )}
 
-      <div className="rounded-md border border-border-subtle bg-bg-secondary overflow-hidden shadow-sm">
-        <table className="w-full text-sm text-left">
-          <thead className="bg-bg-tertiary text-xs uppercase tracking-wider text-text-muted border-b border-border-subtle">
+      <div className="overflow-hidden rounded-md border border-border-subtle bg-bg-secondary shadow-sm">
+        <table className="w-full text-left text-sm">
+          <thead className="border-b border-border-subtle bg-bg-tertiary text-xs tracking-wider text-text-muted uppercase">
             {table.getHeaderGroups().map((headerGroup) => (
               <tr key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (
@@ -86,7 +86,7 @@ export function DataTable<TData, TValue>({
                       ? null
                       : flexRender(
                           header.column.columnDef.header,
-                          header.getContext(),
+                          header.getContext()
                         )}
                   </th>
                 ))}
@@ -99,13 +99,13 @@ export function DataTable<TData, TValue>({
                 <tr
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
-                  className="transition-colors hover:bg-bg-hover/50 text-text-primary"
+                  className="text-text-primary transition-colors hover:bg-bg-hover/50"
                 >
                   {row.getVisibleCells().map((cell) => (
                     <td key={cell.id} className="p-4 align-middle">
                       {flexRender(
                         cell.column.columnDef.cell,
-                        cell.getContext(),
+                        cell.getContext()
                       )}
                     </td>
                   ))}
@@ -133,7 +133,7 @@ export function DataTable<TData, TValue>({
           <button
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
-            className="rounded border border-border-subtle bg-bg-secondary text-text-primary px-3 py-1 text-xs font-medium disabled:opacity-40 disabled:cursor-not-allowed hover:bg-bg-hover hover:border-brand-accent transition"
+            className="rounded border border-border-subtle bg-bg-secondary px-3 py-1 text-xs font-medium text-text-primary transition hover:border-brand-accent hover:bg-bg-hover disabled:cursor-not-allowed disabled:opacity-40"
           >
             Previous
           </button>
@@ -144,7 +144,7 @@ export function DataTable<TData, TValue>({
           <button
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
-            className="rounded border border-border-subtle bg-bg-secondary text-text-primary px-3 py-1 text-xs font-medium disabled:opacity-40 disabled:cursor-not-allowed hover:bg-bg-hover hover:border-brand-accent transition"
+            className="rounded border border-border-subtle bg-bg-secondary px-3 py-1 text-xs font-medium text-text-primary transition hover:border-brand-accent hover:bg-bg-hover disabled:cursor-not-allowed disabled:opacity-40"
           >
             Next
           </button>

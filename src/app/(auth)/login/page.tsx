@@ -7,7 +7,8 @@ export default function LoginPage() {
         Welcome Back
       </h1>
       <p className="mt-2 text-sm text-text-secondary">
-        Sign in to your account to manage your reservations or access staff portals.
+        Sign in to your account to manage your reservations or access staff
+        portals.
       </p>
 
       <div className="mt-6 flex flex-col gap-4">
@@ -18,7 +19,10 @@ export default function LoginPage() {
 
       <p className="mt-6 text-center text-sm text-text-secondary">
         Don&apos;t have an account?{" "}
-        <Link href="/signup" className="text-brand-accent hover:text-brand-accent-hover font-medium">
+        <Link
+          href="/signup"
+          className="font-medium text-brand-accent hover:text-brand-accent-hover"
+        >
           Sign up
         </Link>
       </p>

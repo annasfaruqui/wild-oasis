@@ -3,7 +3,7 @@ export default function CheckoutPage() {
   return (
     <div className="p-8">
       <h1 className="text-2xl font-semibold text-text-primary">Checkout</h1>
-      <p className="text-text-secondary mt-2">
+      <p className="mt-2 text-text-secondary">
         Review your booking details and confirm your reservation.
       </p>
     </div>

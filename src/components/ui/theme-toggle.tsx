@@ -29,13 +29,17 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
-      title={isDark ? "Switch to cozy luxury light mode" : "Switch to midnight alpine dark mode"}
+      title={
+        isDark
+          ? "Switch to cozy luxury light mode"
+          : "Switch to midnight alpine dark mode"
+      }
       className={`relative inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border-subtle bg-bg-secondary text-text-secondary shadow-sm transition-all duration-200 hover:border-brand-accent hover:text-brand-accent hover:shadow-md active:scale-95 ${className}`}
     >
       {isDark ? (
-        <Sun className="h-4 w-4 transition-transform duration-300 hover:rotate-45 text-accent-400" />
+        <Sun className="h-4 w-4 text-accent-400 transition-transform duration-300 hover:rotate-45" />
       ) : (
-        <Moon className="h-4 w-4 transition-transform duration-300 -hover:rotate-12 text-primary-700" />
+        <Moon className="-hover:rotate-12 h-4 w-4 text-primary-700 transition-transform duration-300" />
       )}
     </button>
   );

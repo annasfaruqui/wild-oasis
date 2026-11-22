@@ -1,3 +1,23 @@
+# Custom Project Rules & Agent Guidelines
+
+## 1. Code Formatting (Prettier Consistency)
+
+- After creating or editing any file in the codebase, always format the file according to standard Prettier rules (matching the user's Prettier editor extension).
+- Ensure consistent indentation (2 spaces), single/double quotes, trailing commas, and semicolons so that when the user edits and saves files locally, unexpected formatting diffs are avoided.
+
+## 2. Design System & Semantic Color Tokens
+
+- Strictly adhere to the application's centralized design system defined in `src/app/globals.css`.
+- **DO NOT** use default Tailwind palette colors (such as `text-stone-*`, `bg-stone-*`, `neutral-*`, `gray-*`, etc.) or arbitrary hardcoded color hex values.
+- **ONLY** use the semantic design tokens defined for the project so that theme changes (light/dark mode) apply immediately and styling consistency is maintained across all components:
+  - **Surfaces / Backgrounds**: `bg-bg-primary`, `bg-bg-secondary`, `bg-bg-tertiary`, `hover:bg-bg-hover`
+  - **Typography**: `text-text-primary`, `text-text-secondary`, `text-text-muted`
+  - **Borders & Focus Rings**: `border-border-subtle`, `focus-visible:ring-border-focus`
+  - **Brand & Accents**: `bg-brand-accent`, `hover:bg-brand-accent-hover`, `text-brand-accent`, `bg-brand-accent-subtle`, `text-brand-accent-text`
+  - **Status Feedback**: `color-status-success`, `color-status-error`, `color-status-warning`, `color-status-info`
+
+---
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 ## This is NOT the Next.js you know

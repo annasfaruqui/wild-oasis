@@ -13,9 +13,7 @@ const isProtectedRoute = (pathname: string) =>
   protectedRoutes.some((route) => pathname.startsWith(route));
 
 export default clerkMiddleware(async (auth, req) => {
-  if (isProtectedRoute(req.nextUrl.pathname)) {
-    await auth.protect();
-  }
+  if (isProtectedRoute(req.nextUrl.pathname)) await auth.protect();
 });
 
 export const config = {

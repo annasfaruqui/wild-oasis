@@ -30,9 +30,9 @@ export default function RootLayout({
       <html
         lang="en"
         suppressHydrationWarning
-        className={`${poppins.variable} font-sans h-full antialiased`}
+        className={`${poppins.variable} h-full font-sans antialiased`}
       >
-        <body className="min-h-full flex flex-col font-sans bg-bg-primary text-text-primary">
+        <body className="flex min-h-full flex-col bg-bg-primary font-sans text-text-primary">
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"

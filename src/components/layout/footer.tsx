@@ -29,14 +29,14 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-text-primary">
+            <h4 className="text-sm font-semibold tracking-wider text-text-primary uppercase">
               Navigation
             </h4>
             <ul className="mt-4 space-y-2 text-sm text-text-secondary">
               <li>
                 <Link
                   href="/cabins"
-                  className="hover:text-brand-accent transition-colors"
+                  className="transition-colors hover:text-brand-accent"
                 >
                   Cabins
                 </Link>
@@ -44,7 +44,7 @@ export function Footer() {
               <li>
                 <Link
                   href="#about"
-                  className="hover:text-brand-accent transition-colors"
+                  className="transition-colors hover:text-brand-accent"
                 >
                   Our Story
                 </Link>
@@ -52,7 +52,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/dashboard"
-                  className="hover:text-brand-accent transition-colors"
+                  className="transition-colors hover:text-brand-accent"
                 >
                   Guest Area
                 </Link>
@@ -60,7 +60,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/admin/dashboard"
-                  className="hover:text-brand-accent transition-colors"
+                  className="transition-colors hover:text-brand-accent"
                 >
                   Staff Portal
                 </Link>
@@ -69,10 +69,10 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-text-primary">
+            <h4 className="text-sm font-semibold tracking-wider text-text-primary uppercase">
               Location & Contact
             </h4>
-            <p className="mt-4 text-sm text-text-secondary leading-relaxed">
+            <p className="mt-4 text-sm leading-relaxed text-text-secondary">
               Dolomites, Trentino-Alto Adige
               <br />
               Italy
