@@ -8,7 +8,7 @@ import about2Image from "@public/about/about-2.webp";
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col bg-bg-primary text-text-primary transition-colors duration-200 selection:bg-brand-accent selection:text-primary-950">
+    <div className="flex min-h-screen flex-col bg-bg-primary text-text-primary transition-colors duration-200 selection:bg-action-primary selection:text-action-text">
       <Navbar />
 
       {/* Hero Section */}
@@ -23,16 +23,16 @@ export default function HomePage() {
           quality={85}
           className="object-cover object-center brightness-60"
         />
-        <div className="absolute inset-0 bg-linear-to-b from-primary-950/60 via-transparent to-primary-950/90" />
+        <div className="absolute inset-0 bg-linear-to-b from-[#19140f]/75 via-transparent to-[#19140f]/95" />
 
         <div className="relative z-10 max-w-4xl space-y-6 pt-20">
-          <span className="inline-block rounded-full border border-brand-accent/30 bg-primary-950/70 px-4 py-1.5 text-xs font-medium tracking-widest text-accent-300 uppercase backdrop-blur-md">
+          <span className="inline-block bg-[#19140f]/70 px-4 py-1.5 text-xs font-medium tracking-widest text-accent-primary uppercase backdrop-blur-md">
             The Dolomites &bull; Italy
           </span>
-          <h1 className="text-5xl font-light tracking-tight text-accent-50 sm:text-7xl md:text-8xl">
+          <h1 className="text-5xl font-light tracking-tight text-[#f5ebdd] sm:text-7xl md:text-8xl">
             Welcome to paradise.
           </h1>
-          <p className="mx-auto max-w-2xl text-base leading-relaxed font-light text-primary-100 sm:text-xl">
+          <p className="mx-auto max-w-2xl text-base leading-relaxed font-light text-[#bdb09f] sm:text-xl">
             Where raw nature and refined comfort blend seamlessly. Disconnect
             from the noise and immerse yourself in pristine alpine wilderness.
           </p>
@@ -40,13 +40,13 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <Link
               href="/cabins"
-              className="rounded-lg bg-brand-accent px-8 py-4 text-base font-semibold text-primary-950 shadow-xl transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-accent-hover hover:shadow-brand-accent/20"
+              className="bg-action-primary px-8 py-4 text-base font-semibold text-action-text transition-colors duration-200 hover:bg-action-primary-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
             >
               Explore Luxury Cabins
             </Link>
             <Link
               href="/dashboard"
-              className="rounded-lg border border-border-subtle bg-primary-950/70 px-8 py-4 text-base font-medium text-accent-50 backdrop-blur-md transition-all duration-300 hover:border-brand-accent hover:bg-primary-900/90"
+              className="bg-[#2b241c]/80 px-8 py-4 text-base font-medium text-[#f5ebdd] backdrop-blur-md transition-colors duration-200 hover:bg-[#19140f] focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
             >
               Guest Portal
             </Link>
@@ -57,13 +57,13 @@ export default function HomePage() {
       {/* About Section */}
       <section
         id="about"
-        className="relative z-10 bg-bg-secondary py-24 transition-colors duration-200 sm:py-32"
+        className="relative z-10 bg-bg-surface py-24 transition-colors duration-200 sm:py-32"
       >
         <div className="mx-auto max-w-7xl space-y-28 px-6 lg:px-12">
           {/* Story 1 */}
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="space-y-6 lg:col-span-7">
-              <span className="text-xs font-semibold tracking-widest text-brand-accent uppercase">
+              <span className="text-xs font-semibold tracking-widest text-accent-primary uppercase">
                 Our Sanctuary
               </span>
               <h2 className="text-3xl font-normal tracking-tight text-text-primary sm:text-5xl">
@@ -85,33 +85,33 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="relative aspect-4/3 overflow-hidden rounded-2xl border border-border-subtle shadow-2xl lg:col-span-5">
+            <div className="relative aspect-4/3 overflow-hidden lg:col-span-5">
               <Image
                 src={about1Image}
                 alt="Family sitting around campfire outside wooden cabin"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 placeholder="blur"
-                className="object-cover transition-transform duration-700 hover:scale-105"
+                className="object-cover"
               />
             </div>
           </div>
 
           {/* Story 2 */}
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
-            <div className="relative order-2 aspect-4/3 overflow-hidden rounded-2xl border border-border-subtle shadow-2xl lg:order-1 lg:col-span-5">
+            <div className="relative order-2 aspect-4/3 overflow-hidden lg:order-1 lg:col-span-5">
               <Image
                 src={about2Image}
                 alt="The family team running The Wild Oasis"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 placeholder="blur"
-                className="object-cover transition-transform duration-700 hover:scale-105"
+                className="object-cover"
               />
             </div>
 
             <div className="order-1 space-y-6 lg:order-2 lg:col-span-7">
-              <span className="text-xs font-semibold tracking-widest text-brand-accent uppercase">
+              <span className="text-xs font-semibold tracking-widest text-accent-primary uppercase">
                 Heritage & Tradition
               </span>
               <h2 className="text-3xl font-normal tracking-tight text-text-primary sm:text-5xl">
@@ -134,7 +134,7 @@ export default function HomePage() {
               <div className="pt-2">
                 <Link
                   href="/cabins"
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand-accent transition-colors hover:text-brand-accent-hover"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-link transition-colors duration-200 hover:underline focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
                 >
                   Discover available dates &rarr;
                 </Link>

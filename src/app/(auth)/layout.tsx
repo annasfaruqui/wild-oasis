@@ -9,12 +9,15 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center bg-bg-primary p-6 text-text-primary transition-colors duration-200 selection:bg-brand-accent selection:text-primary-950">
+    <div className="relative flex min-h-screen flex-col items-center justify-center bg-bg-primary p-6 text-text-primary transition-colors duration-200 selection:bg-action-primary selection:text-action-text">
       <div className="absolute top-6 right-6">
         <ThemeToggle />
       </div>
 
-      <Link href="/" className="mb-8 flex items-center gap-3">
+      <Link
+        href="/"
+        className="mb-8 flex items-center gap-3 focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
+      >
         <Image
           src={logoImage}
           alt="The Wild Oasis Logo"

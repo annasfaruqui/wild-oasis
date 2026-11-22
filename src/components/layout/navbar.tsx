@@ -16,7 +16,7 @@ export function Navbar() {
             className="h-10 w-10 object-contain md:h-12 md:w-12"
             priority
           />
-          <span className="text-xl font-semibold tracking-tight text-white drop-shadow-sm md:text-2xl">
+          <span className="text-xl font-semibold tracking-tight text-white md:text-2xl">
             The Wild Oasis
           </span>
         </Link>
@@ -24,25 +24,25 @@ export function Navbar() {
         <div className="flex items-center gap-4 text-sm font-medium text-white/90 md:gap-6 md:text-base">
           <Link
             href="/cabins"
-            className="drop-shadow-sm transition-colors hover:text-accent-400"
+            className="transition-colors hover:text-accent-primary focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
           >
             Cabins
           </Link>
           <Link
             href="/about"
-            className="drop-shadow-sm transition-colors hover:text-accent-400"
+            className="transition-colors hover:text-accent-primary focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
           >
             About
           </Link>
           <Link
             href="/dashboard"
-            className="drop-shadow-sm transition-colors hover:text-accent-400"
+            className="transition-colors hover:text-accent-primary focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
           >
             Guest Area
           </Link>
           <Link
             href="/admin/dashboard"
-            className="rounded-full bg-brand-accent px-4 py-1.5 text-xs font-semibold text-primary-950 shadow-md transition-all hover:bg-brand-accent-hover md:text-sm"
+            className="bg-action-primary px-4 py-1.5 text-xs font-semibold text-action-text transition-colors duration-200 hover:bg-action-primary-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none md:text-sm"
           >
             Staff Portal
           </Link>

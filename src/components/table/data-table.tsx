@@ -67,14 +67,14 @@ export function DataTable<TData, TValue>({
             onChange={(event) =>
               table.getColumn(searchKey)?.setFilterValue(event.target.value)
             }
-            className="max-w-sm rounded-md border border-border-subtle bg-bg-secondary px-3 py-1.5 text-sm text-text-primary shadow-sm transition-colors placeholder:text-text-muted focus-visible:ring-1 focus-visible:ring-border-focus focus-visible:outline-none"
+            className="max-w-sm border border-border-subtle bg-bg-surface px-3 py-1.5 text-sm text-text-primary transition-colors placeholder:text-text-secondary focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
           />
         </div>
       )}
 
-      <div className="overflow-hidden rounded-md border border-border-subtle bg-bg-secondary shadow-sm">
+      <div className="overflow-hidden bg-bg-surface">
         <table className="w-full text-left text-sm">
-          <thead className="border-b border-border-subtle bg-bg-tertiary text-xs tracking-wider text-text-muted uppercase">
+          <thead className="border-b border-border-subtle bg-bg-elevated text-xs tracking-wider text-text-secondary uppercase">
             {table.getHeaderGroups().map((headerGroup) => (
               <tr key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (
@@ -99,7 +99,7 @@ export function DataTable<TData, TValue>({
                 <tr
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
-                  className="text-text-primary transition-colors hover:bg-bg-hover/50"
+                  className="text-text-primary transition-colors hover:bg-bg-hover"
                 >
                   {row.getVisibleCells().map((cell) => (
                     <td key={cell.id} className="p-4 align-middle">
@@ -115,7 +115,7 @@ export function DataTable<TData, TValue>({
               <tr>
                 <td
                   colSpan={columns.length}
-                  className="h-24 text-center text-text-muted"
+                  className="h-24 text-center text-text-secondary"
                 >
                   No results found.
                 </td>
@@ -133,7 +133,7 @@ export function DataTable<TData, TValue>({
           <button
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
-            className="rounded border border-border-subtle bg-bg-secondary px-3 py-1 text-xs font-medium text-text-primary transition hover:border-brand-accent hover:bg-bg-hover disabled:cursor-not-allowed disabled:opacity-40"
+            className="bg-bg-elevated px-3 py-1 text-xs font-medium text-text-primary transition-colors duration-150 hover:bg-bg-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-40"
           >
             Previous
           </button>
@@ -144,7 +144,7 @@ export function DataTable<TData, TValue>({
           <button
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
-            className="rounded border border-border-subtle bg-bg-secondary px-3 py-1 text-xs font-medium text-text-primary transition hover:border-brand-accent hover:bg-bg-hover disabled:cursor-not-allowed disabled:opacity-40"
+            className="bg-bg-elevated px-3 py-1 text-xs font-medium text-text-primary transition-colors duration-150 hover:bg-bg-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-40"
           >
             Next
           </button>

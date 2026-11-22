@@ -5,7 +5,7 @@ import logoImage from "@public/brand/logo.webp";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border-subtle bg-bg-secondary text-text-secondary transition-colors duration-200">
+    <footer className="bg-bg-surface text-text-secondary transition-colors duration-200">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4 md:col-span-2">
@@ -21,7 +21,7 @@ export function Footer() {
                 The Wild Oasis
               </span>
             </div>
-            <p className="max-w-md text-sm text-text-muted">
+            <p className="max-w-md text-sm text-text-secondary">
               Where luxury living meets untouched wilderness in the heart of the
               Dolomites. An intimate mountain retreat managed with devotion
               since 1962.
@@ -36,7 +36,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/cabins"
-                  className="transition-colors hover:text-brand-accent"
+                  className="transition-colors hover:text-link focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
                 >
                   Cabins
                 </Link>
@@ -44,7 +44,7 @@ export function Footer() {
               <li>
                 <Link
                   href="#about"
-                  className="transition-colors hover:text-brand-accent"
+                  className="transition-colors hover:text-link focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
                 >
                   Our Story
                 </Link>
@@ -52,7 +52,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/dashboard"
-                  className="transition-colors hover:text-brand-accent"
+                  className="transition-colors hover:text-link focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
                 >
                   Guest Area
                 </Link>
@@ -60,7 +60,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/admin/dashboard"
-                  className="transition-colors hover:text-brand-accent"
+                  className="transition-colors hover:text-link focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
                 >
                   Staff Portal
                 </Link>
@@ -82,7 +82,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-border-subtle pt-6 text-center text-xs text-text-muted">
+        <div className="mt-12 border-t border-border-subtle pt-6 text-center text-xs text-text-secondary">
           &copy; <CurrentYear /> The Wild Oasis. All rights reserved.
         </div>
       </div>

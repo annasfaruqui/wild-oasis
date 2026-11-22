@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function LoginPage() {
   return (
-    <div className="rounded-2xl border border-border-subtle bg-bg-secondary p-8 shadow-xl">
+    <div className="rounded-2xl bg-bg-surface p-8">
       <h1 className="text-2xl font-semibold tracking-tight text-text-primary">
         Welcome Back
       </h1>
@@ -12,7 +12,7 @@ export default function LoginPage() {
       </p>
 
       <div className="mt-6 flex flex-col gap-4">
-        <div className="rounded-lg border border-dashed border-border-subtle bg-bg-tertiary p-6 text-center text-sm text-text-muted">
+        <div className="rounded-lg bg-bg-elevated p-6 text-center text-sm text-text-secondary">
           Clerk SignIn component will be rendered here.
         </div>
       </div>
@@ -21,7 +21,7 @@ export default function LoginPage() {
         Don&apos;t have an account?{" "}
         <Link
           href="/signup"
-          className="font-medium text-brand-accent hover:text-brand-accent-hover"
+          className="font-medium text-link transition-colors duration-200 hover:underline focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
         >
           Sign up
         </Link>

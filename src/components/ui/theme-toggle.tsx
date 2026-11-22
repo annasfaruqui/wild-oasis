@@ -15,7 +15,7 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
   if (!mounted) {
     return (
       <div
-        className={`inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border-subtle bg-bg-secondary opacity-60 ${className}`}
+        className={`inline-flex h-9 w-9 items-center justify-center bg-bg-surface opacity-60 ${className}`}
         aria-hidden="true"
       >
         <span className="h-4 w-4" />
@@ -29,17 +29,13 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
-      title={
-        isDark
-          ? "Switch to cozy luxury light mode"
-          : "Switch to midnight alpine dark mode"
-      }
-      className={`relative inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border-subtle bg-bg-secondary text-text-secondary shadow-sm transition-all duration-200 hover:border-brand-accent hover:text-brand-accent hover:shadow-md active:scale-95 ${className}`}
+      title={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      className={`inline-flex h-9 w-9 items-center justify-center bg-bg-surface text-text-secondary transition-colors duration-200 hover:bg-bg-hover hover:text-text-primary focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none ${className}`}
     >
       {isDark ? (
-        <Sun className="h-4 w-4 text-accent-400 transition-transform duration-300 hover:rotate-45" />
+        <Sun className="h-4 w-4 text-accent-primary transition-colors" />
       ) : (
-        <Moon className="-hover:rotate-12 h-4 w-4 text-primary-700 transition-transform duration-300" />
+        <Moon className="h-4 w-4 text-text-primary transition-colors" />
       )}
     </button>
   );

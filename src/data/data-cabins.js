@@ -1,6 +1,8 @@
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
 
-const imageUrl = supabaseUrl ? `${supabaseUrl}/storage/v1/object/public/cabin-images/` : "/cabins/";
+const imageUrl = supabaseUrl
+  ? `${supabaseUrl}/storage/v1/object/public/cabin-images/`
+  : "/cabins/";
 
 export const cabins = [
   {
