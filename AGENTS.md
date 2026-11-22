@@ -17,6 +17,18 @@
   - **Borders & Focus Rings**: `border-border-subtle`, `focus-visible:ring-border-focus`
   - **Status Feedback**: `color-status-success`, `color-status-error`, `color-status-warning`, `color-status-info`
 
+## 3. Feature-Based Architecture & Component Placement
+
+- Feature-specific components (e.g. cabins, bookings, guests, dashboard, landing-page sub-areas, etc.) **MUST** reside within their respective feature folders inside `src/features/<feature>/components/`.
+- The root `src/components/` directory is **STRICTLY** reserved for general-purpose, shared UI and layout primitives (e.g., `navbar.tsx`, `footer.tsx`, shared UI atoms) that do not belong to any specific domain feature.
+
+## 4. No `index.ts` Barrel Files & Direct Concrete Imports
+
+- **DO NOT** use `index.ts` or `index.tsx` barrel files anywhere in the codebase.
+- Avoid intermediate re-exporting layers that obscure the source location.
+- **ALWAYS** import directly from the concrete component/module file (e.g. `import { CabinFilterGrid } from "@/features/cabins/components/cabin-filter-grid"`).
+- This ensures developers can use IDE navigation (Ctrl+Click / Cmd+Click) to jump directly into the source component without jumping through intermediate barrel layers.
+
 ---
 
 <!-- BEGIN:nextjs-agent-rules -->

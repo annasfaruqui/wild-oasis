@@ -1,5 +1,5 @@
-import { HeroSection } from "@/features/landing-page/components/hero-section";
-import { AboutSection } from "@/features/landing-page/components/about-section";
+import { AboutSection } from "@/features/landing-page/home/components/about-section";
+import { HeroSection } from "@/features/landing-page/home/components/hero-section";
 
 export default function HomePage() {
   return (

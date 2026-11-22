@@ -1,6 +1,6 @@
-import { CabinsOverviewHero } from "@/features/landing-page/components/cabins-overview-hero";
-import { CabinFilterGrid } from "@/components/cabins/cabin-filter-grid";
-import { CabinsOverviewCta } from "@/features/landing-page/components/cabins-overview-cta";
+import { CabinFilterGrid } from "@/features/cabins/components/cabin-filter-grid";
+import { CabinsOverviewCta } from "@/features/landing-page/cabins-overview/components/cabins-overview-cta";
+import { CabinsOverviewHero } from "@/features/landing-page/cabins-overview/components/cabins-overview-hero";
 
 export default function CabinsOverviewPage() {
   return (

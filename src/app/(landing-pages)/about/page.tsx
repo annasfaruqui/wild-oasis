@@ -1,7 +1,7 @@
-import { AboutHero } from "@/features/landing-page/components/about-hero";
-import { AboutSanctuary } from "@/features/landing-page/components/about-sanctuary";
-import { AboutValues } from "@/features/landing-page/components/about-values";
-import { AboutHeritage } from "@/features/landing-page/components/about-heritage";
+import { AboutHeritage } from "@/features/landing-page/about/components/about-heritage";
+import { AboutHero } from "@/features/landing-page/about/components/about-hero";
+import { AboutSanctuary } from "@/features/landing-page/about/components/about-sanctuary";
+import { AboutValues } from "@/features/landing-page/about/components/about-values";
 
 export default function AboutPage() {
   return (

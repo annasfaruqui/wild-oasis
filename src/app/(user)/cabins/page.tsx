@@ -1,4 +1,4 @@
-import { CabinFilterGrid } from "@/components/cabins/cabin-filter-grid";
+import { CabinFilterGrid } from "@/features/cabins/components/cabin-filter-grid";
 
 export default function UserCabinsPage() {
   return (
