@@ -29,6 +29,12 @@
 - **ALWAYS** import directly from the concrete component/module file (e.g. `import { CabinFilterGrid } from "@/features/cabins/components/cabin-filter-grid"`).
 - This ensures developers can use IDE navigation (Ctrl+Click / Cmd+Click) to jump directly into the source component without jumping through intermediate barrel layers.
 
+## 5. Icons & Brand Logos (No Inline `<svg>` Elements)
+
+- **DO NOT** write raw inline `<svg>` elements in JSX/TSX components.
+- For UI icons across the app, use `lucide-react` (or `react-icons` if needed).
+- For third-party brand logos (e.g., Google, Meta), store small `.webp` assets in `public/icons/` and render them with Next.js `<Image>`.
+
 ---
 
 <!-- BEGIN:nextjs-agent-rules -->
