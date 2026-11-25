@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 export default function AdminDashboardPage() {
   return (
     <div className="space-y-8">
@@ -82,9 +84,9 @@ export default function AdminDashboardPage() {
                 </span>
               </div>
             </div>
-            <button className="bg-action-primary px-4 py-1.5 text-xs font-semibold text-action-text transition-colors duration-200 hover:bg-action-primary-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none">
+            <Button size="xs" className="px-4">
               Check in
-            </button>
+            </Button>
           </div>
 
           <div className="flex items-center justify-between py-4">
@@ -101,9 +103,9 @@ export default function AdminDashboardPage() {
                 </span>
               </div>
             </div>
-            <button className="bg-bg-elevated px-4 py-1.5 text-xs font-medium text-text-primary transition-colors hover:bg-bg-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none">
+            <Button variant="secondary" size="xs" className="px-4">
               Check out
-            </button>
+            </Button>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function CheckoutPage() {
   return (
@@ -69,12 +69,9 @@ export default function CheckoutPage() {
               </div>
 
               <div className="pt-2">
-                <button
-                  type="button"
-                  className="w-full bg-action-primary py-3.5 text-sm font-semibold text-action-text transition-colors duration-200 hover:bg-action-primary-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
-                >
+                <Button type="button" size="lg" className="w-full">
                   Confirm Booking
-                </button>
+                </Button>
               </div>
             </form>
           </div>

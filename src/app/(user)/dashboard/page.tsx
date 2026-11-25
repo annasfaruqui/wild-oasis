@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LinkButton } from "@/components/ui/link-button";
 
 export default function UserDashboardPage() {
   return (
@@ -62,12 +62,9 @@ export default function UserDashboardPage() {
             starting August 14, 2026.
           </p>
           <div className="mt-6 flex gap-3">
-            <Link
-              href="/bookings"
-              className="bg-action-primary px-5 py-2.5 text-xs font-semibold text-action-text transition-colors duration-200 hover:bg-action-primary-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
-            >
+            <LinkButton href="/bookings" size="sm" className="px-5 py-2.5">
               View Reservation
-            </Link>
+            </LinkButton>
           </div>
         </div>
 
@@ -80,12 +77,14 @@ export default function UserDashboardPage() {
             Dolomites forest.
           </p>
           <div className="mt-6 flex gap-3">
-            <Link
+            <LinkButton
               href="/cabins"
-              className="bg-bg-elevated px-5 py-2.5 text-xs font-medium text-text-primary transition-colors duration-200 hover:bg-bg-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
+              variant="secondary"
+              size="sm"
+              className="px-5 py-2.5"
             >
               Browse Catalog
-            </Link>
+            </LinkButton>
           </div>
         </div>
       </div>

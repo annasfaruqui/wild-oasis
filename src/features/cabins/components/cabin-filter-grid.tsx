@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { LinkButton } from "@/components/ui/link-button";
 import { cabins } from "@/data/data-cabins";
+import Image from "next/image";
+import { useState } from "react";
 
 export type CapacityFilter = "all" | "small" | "medium" | "large";
 
@@ -63,46 +64,34 @@ export function CabinFilterGrid({
         }
       >
         <div className="flex flex-wrap gap-2">
-          <button
+          <Button
+            size="sm"
+            variant={activeFilter === "all" ? "default" : "surface"}
             onClick={() => setActiveFilter("all")}
-            className={`cursor-pointer px-4 py-2 text-xs transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none ${
-              activeFilter === "all"
-                ? "bg-action-primary font-semibold text-action-text"
-                : "bg-bg-surface font-medium text-text-secondary hover:bg-bg-hover hover:text-text-primary"
-            }`}
           >
             All Cabins ({cabins.length})
-          </button>
-          <button
+          </Button>
+          <Button
+            size="sm"
+            variant={activeFilter === "small" ? "default" : "surface"}
             onClick={() => setActiveFilter("small")}
-            className={`cursor-pointer px-4 py-2 text-xs transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none ${
-              activeFilter === "small"
-                ? "bg-action-primary font-semibold text-action-text"
-                : "bg-bg-surface font-medium text-text-secondary hover:bg-bg-hover hover:text-text-primary"
-            }`}
           >
             1&mdash;3 Guests
-          </button>
-          <button
+          </Button>
+          <Button
+            size="sm"
+            variant={activeFilter === "medium" ? "default" : "surface"}
             onClick={() => setActiveFilter("medium")}
-            className={`cursor-pointer px-4 py-2 text-xs transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none ${
-              activeFilter === "medium"
-                ? "bg-action-primary font-semibold text-action-text"
-                : "bg-bg-surface font-medium text-text-secondary hover:bg-bg-hover hover:text-text-primary"
-            }`}
           >
             4&mdash;7 Guests
-          </button>
-          <button
+          </Button>
+          <Button
+            size="sm"
+            variant={activeFilter === "large" ? "default" : "surface"}
             onClick={() => setActiveFilter("large")}
-            className={`cursor-pointer px-4 py-2 text-xs transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none ${
-              activeFilter === "large"
-                ? "bg-action-primary font-semibold text-action-text"
-                : "bg-bg-surface font-medium text-text-secondary hover:bg-bg-hover hover:text-text-primary"
-            }`}
           >
             8&mdash;12 Guests
-          </button>
+          </Button>
         </div>
       </div>
 
@@ -138,8 +127,8 @@ export function CabinFilterGrid({
 
                 <div className="flex flex-1 flex-col justify-between space-y-4 px-4 py-6">
                   <div className="space-y-4">
-                    <div className="grid grid-cols-5 items-start justify-between gap-1.5">
-                      <div className="col-span-3 space-y-1">
+                    <div className="grid grid-cols-2 items-start justify-between gap-1">
+                      <div className="space-y-1">
                         <h3 className="text-lg leading-5 font-medium text-text-primary">
                           Cabin {cabin.name}
                         </h3>
@@ -148,7 +137,7 @@ export function CabinFilterGrid({
                         </span>
                       </div>
 
-                      <div className="col-span-2 flex flex-col items-end">
+                      <div className="flex flex-col items-end">
                         <span className="text-xl font-semibold text-text-primary">
                           ${effectivePrice} / night
                         </span>
@@ -167,12 +156,9 @@ export function CabinFilterGrid({
                   </div>
 
                   <div className="pt-2">
-                    <Link
-                      href={actionHref}
-                      className="inline-flex w-full items-center justify-center bg-action-primary px-6 py-3 text-sm font-semibold text-action-text transition-colors duration-200 hover:bg-action-primary-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
-                    >
+                    <LinkButton href={actionHref} size="md" className="w-full">
                       {actionLabel}
-                    </Link>
+                    </LinkButton>
                   </div>
                 </div>
               </div>

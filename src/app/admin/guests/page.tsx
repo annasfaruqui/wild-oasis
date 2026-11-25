@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 const mockGuests = [
   {
     id: 1,
@@ -69,9 +71,9 @@ export default function AdminGuestsPage() {
                   {guest.staysCount} {guest.staysCount === 1 ? "stay" : "stays"}
                 </td>
                 <td className="p-4 text-right">
-                  <button className="bg-bg-elevated px-3 py-1 text-xs font-medium text-text-primary transition-colors hover:bg-bg-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none">
+                  <Button variant="secondary" size="xs" className="py-1">
                     View History
-                  </button>
+                  </Button>
                 </td>
               </tr>
             ))}

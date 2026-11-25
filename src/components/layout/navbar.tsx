@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { LinkButton } from "@/components/ui/link-button";
 import logoImage from "@public/brand/logo.webp";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 interface NavbarProps {
   /**
@@ -45,12 +46,9 @@ function NavContent() {
         >
           About
         </Link>
-        <Link
-          href="/login"
-          className="bg-action-primary px-4 py-1.5 text-xs font-semibold text-action-text transition-colors duration-200 hover:bg-action-primary-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none md:text-sm"
-        >
+        <LinkButton href="/login" size="xs" className="px-4 py-1.5 md:text-sm">
           Login
-        </Link>
+        </LinkButton>
       </div>
     </nav>
   );

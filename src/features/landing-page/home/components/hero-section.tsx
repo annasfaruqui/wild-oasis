@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Link from "next/link";
+import { LinkButton } from "@/components/ui/link-button";
 import bgImage from "@public/brand/bg.webp";
+import Image from "next/image";
 
 export function HeroSection() {
   return (
@@ -37,12 +37,9 @@ export function HeroSection() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-          <Link
-            href="/cabins-overview"
-            className="bg-action-primary px-8 py-4 text-base font-semibold text-action-text transition-colors duration-200 hover:bg-action-primary-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
-          >
+          <LinkButton href="/cabins-overview" size="xl">
             Explore Luxury Cabins
-          </Link>
+          </LinkButton>
         </div>
       </div>
     </section>

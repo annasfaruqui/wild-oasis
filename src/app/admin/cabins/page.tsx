@@ -1,4 +1,5 @@
 import { cabins } from "@/data/data-cabins";
+import { Button } from "@/components/ui/button";
 
 export default function AdminCabinsPage() {
   return (
@@ -16,9 +17,9 @@ export default function AdminCabinsPage() {
           </p>
         </div>
 
-        <button className="bg-action-primary px-5 py-2.5 text-xs font-semibold text-action-text transition-colors duration-200 hover:bg-action-primary-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none">
+        <Button size="sm" className="px-5 py-2.5">
           + Add New Cabin
-        </button>
+        </Button>
       </div>
 
       <div className="overflow-hidden bg-bg-surface">
@@ -53,9 +54,9 @@ export default function AdminCabinsPage() {
                   )}
                 </td>
                 <td className="p-4 text-right">
-                  <button className="bg-bg-elevated px-3 py-1 text-xs font-medium text-text-primary transition-colors hover:bg-bg-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none">
+                  <Button variant="secondary" size="xs" className="py-1">
                     Edit
-                  </button>
+                  </Button>
                 </td>
               </tr>
             ))}

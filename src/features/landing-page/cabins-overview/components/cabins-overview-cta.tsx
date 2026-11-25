@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LinkButton } from "@/components/ui/link-button";
 
 export function CabinsOverviewCta() {
   return (
@@ -11,18 +11,12 @@ export function CabinsOverviewCta() {
         flexible reservation management.
       </p>
       <div className="mt-6 flex flex-wrap justify-center gap-4">
-        <Link
-          href="/signup"
-          className="bg-action-primary px-8 py-3 text-sm font-semibold text-action-text transition-colors duration-200 hover:bg-action-primary-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
-        >
+        <LinkButton href="/signup" size="lg">
           Create Account
-        </Link>
-        <Link
-          href="/login"
-          className="bg-bg-elevated px-8 py-3 text-sm font-medium text-text-primary transition-colors duration-200 hover:bg-bg-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
-        >
+        </LinkButton>
+        <LinkButton href="/login" variant="secondary" size="lg">
           Sign In
-        </Link>
+        </LinkButton>
       </div>
     </div>
   );

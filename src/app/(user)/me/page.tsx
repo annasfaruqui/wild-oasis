@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 export default function UserProfilePage() {
   return (
     <div className="mx-auto max-w-3xl px-6 py-12 lg:px-12">
@@ -70,12 +72,9 @@ export default function UserProfilePage() {
           </div>
 
           <div className="pt-4">
-            <button
-              type="button"
-              className="bg-action-primary px-6 py-2.5 text-sm font-semibold text-action-text transition-colors duration-200 hover:bg-action-primary-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
-            >
+            <Button type="button" size="default" className="px-6">
               Save Changes
-            </button>
+            </Button>
           </div>
         </form>
       </div>

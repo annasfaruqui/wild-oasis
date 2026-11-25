@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
+import { LinkButton } from "@/components/ui/link-button";
 import about1Image from "@public/about/about-1.webp";
 import about2Image from "@public/about/about-2.webp";
+import Image from "next/image";
 
 export function AboutSection() {
   return (
@@ -81,12 +81,9 @@ export function AboutSection() {
             </div>
 
             <div className="pt-2">
-              <Link
-                href="/cabins-overview"
-                className="inline-flex bg-action-primary px-6 py-3 text-sm font-semibold text-action-text transition-colors duration-200 hover:bg-action-primary-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
-              >
+              <LinkButton href="/cabins-overview" size="md">
                 Explore Our Cabins
-              </Link>
+              </LinkButton>
             </div>
           </div>
         </div>

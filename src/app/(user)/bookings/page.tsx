@@ -1,6 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import cabin001 from "@public/cabins/cabin-001.webp";
+import { Button } from "@/components/ui/button";
+import { LinkButton } from "@/components/ui/link-button";
 
 export default function UserBookingsPage() {
   return (
@@ -63,12 +64,12 @@ export default function UserBookingsPage() {
               </div>
 
               <div className="flex items-center gap-2">
-                <button className="bg-bg-elevated px-4 py-2 text-xs font-medium text-text-primary transition-colors hover:bg-bg-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none">
+                <Button variant="secondary" size="sm">
                   Edit Details
-                </button>
-                <button className="bg-bg-elevated px-4 py-2 text-xs font-medium text-status-error transition-colors hover:bg-bg-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none">
+                </Button>
+                <Button variant="destructive" size="sm">
                   Cancel
-                </button>
+                </Button>
               </div>
             </div>
           </div>
@@ -83,12 +84,9 @@ export default function UserBookingsPage() {
             Discover other secluded cabins for autumn and winter stays.
           </p>
           <div className="mt-4">
-            <Link
-              href="/cabins"
-              className="inline-flex bg-action-primary px-6 py-2.5 text-sm font-semibold text-action-text transition-colors duration-200 hover:bg-action-primary-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
-            >
+            <LinkButton href="/cabins" size="md">
               Explore Cabins
-            </Link>
+            </LinkButton>
           </div>
         </div>
       </div>

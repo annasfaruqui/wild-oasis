@@ -13,6 +13,8 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 import * as React from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -58,7 +60,7 @@ export function DataTable<TData, TValue>({
     <div className="w-full space-y-4">
       {searchKey && (
         <div className="flex items-center justify-between">
-          <input
+          <Input
             type="text"
             placeholder={searchPlaceholder}
             value={
@@ -67,7 +69,7 @@ export function DataTable<TData, TValue>({
             onChange={(event) =>
               table.getColumn(searchKey)?.setFilterValue(event.target.value)
             }
-            className="max-w-sm border border-border-subtle bg-bg-surface px-3 py-1.5 text-sm text-text-primary transition-colors placeholder:text-text-secondary focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
+            className="max-w-sm bg-bg-surface px-3 py-1.5"
           />
         </div>
       )}
@@ -130,24 +132,28 @@ export function DataTable<TData, TValue>({
           Showing {table.getRowModel().rows.length} of {data.length} entries
         </div>
         <div className="flex items-center space-x-2">
-          <button
+          <Button
+            variant="secondary"
+            size="xs"
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
-            className="bg-bg-elevated px-3 py-1 text-xs font-medium text-text-primary transition-colors duration-150 hover:bg-bg-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-40"
+            className="py-1"
           >
             Previous
-          </button>
+          </Button>
           <span className="text-xs">
             Page {table.getState().pagination.pageIndex + 1} of{" "}
             {table.getPageCount() || 1}
           </span>
-          <button
+          <Button
+            variant="secondary"
+            size="xs"
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
-            className="bg-bg-elevated px-3 py-1 text-xs font-medium text-text-primary transition-colors duration-150 hover:bg-bg-hover focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-40"
+            className="py-1"
           >
             Next
-          </button>
+          </Button>
         </div>
       </div>
     </div>

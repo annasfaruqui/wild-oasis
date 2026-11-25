@@ -1,7 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
-import { CurrentYear } from "./current-year";
+import { CurrentYear } from "@/components/layout/current-year";
 import logoImage from "@public/brand/logo.webp";
+import Image from "next/image";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -35,7 +35,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-text-secondary">
               <li>
                 <Link
-                  href="/cabins"
+                  href="/cabins-overview"
                   className="transition-colors hover:text-link focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
                 >
                   Cabins
@@ -43,7 +43,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="#about"
+                  href="/about"
                   className="transition-colors hover:text-link focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
                 >
                   Our Story
@@ -55,14 +55,6 @@ export function Footer() {
                   className="transition-colors hover:text-link focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
                 >
                   Guest Area
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/admin/dashboard"
-                  className="transition-colors hover:text-link focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
-                >
-                  Staff Portal
                 </Link>
               </li>
             </ul>
@@ -77,7 +69,12 @@ export function Footer() {
               <br />
               Italy
               <br />
-              hello@thewildoasis.com
+              <a
+                className="transition-colors hover:text-link focus-visible:ring-2 focus-visible:ring-border-focus focus-visible:outline-none"
+                href="mailto:hello@thewildoasis.com"
+              >
+                hello@thewildoasis.com
+              </a>
             </p>
           </div>
         </div>
