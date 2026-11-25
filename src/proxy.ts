@@ -2,11 +2,12 @@ import { clerkMiddleware } from "@clerk/nextjs/server";
 
 const protectedRoutes = [
   "/admin",
-  "/dashboard",
   "/bookings",
   "/checkout",
   "/me",
-  "/onboarding",
+  // Temporarily unprotected while testing fake auth flow (signup -> onboarding -> dashboard)
+  // "/dashboard",
+  // "/onboarding",
 ];
 
 const isProtectedRoute = (pathname: string) =>
